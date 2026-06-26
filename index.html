@@ -36,10 +36,10 @@
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT: '#E63946', dark: '#D62F3D', mid: '#E04250', light: '#EC5A66', 300: '#F2737D', pale: '#F2C9CD', ultra: '#FCEEEF' },
-            ink:     { DEFAULT: '#1A1A2E', 800: '#1A1A2E', 700: '#26263E', 600: '#2E2E46', 500: '#34344E' },
-            muted:   { light: '#5B5B68', DEFAULT: '#8E8E9C' },
-            accent:  { DEFAULT: '#F59E0B' },
+            primary: { DEFAULT: '#A8342A', dark: '#882A20', mid: '#982F25', light: '#BF4D40', 300: '#CE7468', pale: '#ECCEC8', ultra: '#F9F0ED' },
+            ink:     { DEFAULT: '#2B2420', 800: '#2B2420', 700: '#3A322C', 600: '#443A33', 500: '#4E433A' },
+            muted:   { light: '#6B6055', DEFAULT: '#948A7C' },
+            accent:  { DEFAULT: '#C8923A' },
           },
           fontFamily: {
             display: ['Barlow', 'sans-serif'],
@@ -61,48 +61,51 @@
   <style>
     /* PROVISIONAL COLORS — replace when client brand colors confirmed */
     :root {
-      /* CENTRALIZED PROVISIONAL PALETTE — neutral names, values UNCHANGED. Pass-2 swaps these to barn-red. */
-      /* primary (red) */
-      --color-primary:        #E63946;
-      --color-primary-rgb:    230,57,70;
-      --color-primary-dark:   #D62F3D;
-      --color-primary-mid:    #E04250;
-      --color-primary-light:  #EC5A66;
-      --color-primary-300:    #F2737D;
-      --color-primary-pale:   #F2C9CD;
-      --color-primary-ultra:  #FCEEEF;
-      --color-primary-tint-1: #F0888F;
-      --color-primary-tint-2: #F2A6AC;
-      --color-primary-tint-3: #F09AA2;
-      /* ink (dark / navy) */
-      --color-ink:            #1A1A2E;
-      --color-ink-rgb:        26,26,46;
-      --color-ink-900-rgb:    22,22,38;
-      --color-ink-700:        #26263E;
-      --color-ink-600:        #2E2E46;
-      --color-ink-500:        #34344E;
-      /* neutral grays */
-      --color-gray-700:       #54545F;
-      --color-gray-600:       #5B5B68;
-      --color-gray-500:       #8E8E9C;
-      --color-gray-450:       #9A9AA8;
-      --color-gray-400:       #9C9CAC;
-      --color-gray-350:       #A6A6B6;
-      /* surfaces */
-      --color-surface-300:    #D8D8E2;
-      --color-surface-200:    #D0D0DA;
-      --color-surface-150:    #ECECF1;
-      --color-surface-100:    #F3F3F6;
-      /* accent (amber) */
-      --color-accent:         #F59E0B;
+      /* MESQUITE BARN-RED PALETTE (Move 2). */
+      /* primary — barn red #A8342A, ramp derived in-family */
+      --color-primary:        #A8342A;
+      --color-primary-rgb:    168,52,42;
+      --color-primary-dark:   #882A20;
+      --color-primary-mid:    #982F25;
+      --color-primary-light:  #BF4D40;
+      --color-primary-300:    #CE7468;
+      --color-primary-pale:   #ECCEC8;
+      --color-primary-ultra:  #F9F0ED;
+      --color-primary-tint-1: #D58D84;
+      --color-primary-tint-2: #E6B6AE;
+      --color-primary-tint-3: #DFAAA1;
+      /* ink — espresso charcoal #2B2420, warm dark ramp */
+      --color-ink:            #2B2420;
+      --color-ink-rgb:        43,36,32;
+      --color-ink-900-rgb:    30,25,22;
+      --color-ink-700:        #3A322C;
+      --color-ink-600:        #443A33;
+      --color-ink-500:        #4E433A;
+      /* neutral grays — warmed to brown-gray */
+      --color-gray-700:       #514941;
+      --color-gray-600:       #6B6055;
+      --color-gray-500:       #948A7C;
+      --color-gray-450:       #9F9385;
+      --color-gray-400:       #A1968A;
+      --color-gray-350:       #ABA092;
+      /* surfaces — warm cream ramp */
+      --color-surface-300:    #E6DDD0;
+      --color-surface-200:    #DED4C5;
+      --color-surface-150:    #EFE7D8;
+      --color-surface-100:    #F5EEE0;
+      /* accent — warm gold/tan */
+      --color-accent:         #C8923A;
+      /* page background (cream) + primary body copy (brown-gray) — new in Move 2 */
+      --color-bg:             #FAF5EC;
+      --color-body:           #3A332E;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Nunito', sans-serif; background: #fff; color: var(--color-ink); }
+    body { font-family: 'Nunito', sans-serif; background: var(--color-bg); color: var(--color-body); }
     h1,h2,h3,h4 { font-family: 'Barlow', sans-serif; }
 
-    .section-dark { background: #FFFFFF; }
+    .section-dark { background: var(--color-bg); }
     .section-mid  {
       background:
         radial-gradient(ellipse 100% 60% at 50% 0%, rgba(var(--color-ink-rgb),0.05) 0%, transparent 55%),
@@ -1328,8 +1331,8 @@
       <div class="absolute inset-0" style="background: rgba(20,20,34,0.62);"></div>
       <div class="dark-cta-ramp"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-ink-rgb),0.44) 0%, transparent 65%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(90,30,40,0.16) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(90,30,40,0.12) 0%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(130,40,32,0.16) 0%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(130,40,32,0.12) 0%, transparent 55%);"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse 45% 35% at 50% 78%, rgba(var(--color-primary-rgb),0.12) 0%, transparent 55%);"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(0,0,0,0.36) 100%); pointer-events: none;"></div>
 
