@@ -143,7 +143,7 @@ All cities are in the Rio Grande Valley, Texas. The site should feel locally roo
 - Cloned from master template `jhurtado86/nexor-template` (plain HTML, Tailwind CDN) — template is never modified directly; each client site is a clone.
 - **Template ships generic filenames** (`services/service-one.html` … `service-six.html`, `areas/city-one.html` … `city-six.html`). For this client, **rename to semantic, keyword-bearing slugs** (below) and update all internal links + sitemap to match. Semantic slugs carry the local-SEO keyword in the URL.
 
-**14 pages total (template's 6th services/ slot is left unused):**
+**15 pages total (the 6th services/ slot is the Inventory gallery — see below):**
 
 - index.html (homepage)
 - about.html
@@ -152,7 +152,7 @@ All cities are in the Rio Grande Valley, Texas. The site should feel locally roo
 - services/carports.html
 - services/custom-buildings.html
 - services/cabins-portable-offices.html
-- services/financing.html
+- services/inventory.html  *(photo GALLERY, not a service — see Inventory Page note below)*
 - areas/alamo.html
 - areas/mcallen.html
 - areas/edinburg.html
@@ -160,7 +160,15 @@ All cities are in the Rio Grande Valley, Texas. The site should feel locally roo
 - areas/pharr.html
 - areas/harlingen.html
 
-(5 service pages + 6 city pages + home/about/thank-you = 14 pages. ALL city pages live under `/areas/`, ALL service pages under `/services/`. Internal links are root-relative with a leading slash — see Canonical Host Rule.)
+(5 service pages + 1 inventory gallery + 6 city pages + home/about/thank-you = 15 pages. ALL city pages live under `/areas/`, ALL service pages under `/services/`. Internal links are root-relative with a leading slash — see Canonical Host Rule.)
+
+#### Inventory Page (`services/inventory.html`) — gallery, not a service
+- A single sitewide visual gallery of buildings on the Alamo lot (sheds, cabins, barns, carports), grouped loosely by type. Its job is PROOF + browsing, not keyword ranking — it must NOT compete with the service pages for buying searches.
+- **Schema: `ImageGallery` (or `CollectionPage`) — NOT `Service`/`Product`.** EXCLUDED from the homepage `hasOfferCatalog` (catalog stays at 5 services). This is the one intentional case where the 6 services-grid cards do NOT equal the 5-entry offer catalog — do not "fix" it by re-adding inventory.
+- **Primary CTA → the Stor-Mor ShedSuite dealer page** (`https://stormor.shedsuite.com/878`) for LIVE pricing, model names/numbers, and availability — new tab, `rel="noopener"`. Frame as a feature ("Browse our full live inventory →"); that site is the real-time source of truth. Do NOT put fixed prices or model numbers on this page.
+- **Secondary links → the relevant service pages** (shed photos → /services/storage-sheds.html, etc.) so the gallery feeds authority INTO the conversion pages.
+- **LAUNCH-BLOCKED on real lot photos.** Build structurally now (grid, final alt-text, schema) with placehold.co at final dimensions; cannot go live convincingly with placeholder boxes. Check whether Stor-Mor product photos are usable interim (authorized dealer — confirm with client).
+- Where "Inventory" finally sits in the nav is a content/homepage-build decision; the rename pass already repointed the 6th-slot links to /services/inventory.html.
 
 ### Template Sections to REPURPOSE / DELETE for this client
 
@@ -172,7 +180,8 @@ The template was forked from an auto-glass (OptiGlass) site and carries home-ser
 
 ### Outstanding Launch Blockers
 
-- Photo assets (hero, product/inventory, og-image) not yet provided
+- Photo assets (hero, product photos, og-image) not yet provided
+- Inventory-gallery photos not yet provided — services/inventory.html is launch-blocked until real lot photos (or usable Stor-Mor product shots) are in hand
 - License/certification details not yet provided
 - Founded year not yet confirmed
 - Official tagline not yet confirmed
