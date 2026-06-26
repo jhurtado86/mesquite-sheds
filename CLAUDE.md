@@ -1,205 +1,365 @@
-# CLAUDE.md — Nexor AI Website Template
-
-## What This Is
-
-This is the **Nexor AI** website template: a generic, brandless **home‑services business** site
-built to be customized per client. Every page ships with neutral placeholder content
-(`Your Business Name`, `Service One`–`Service Six`, `[City]`, `[Region]`, `(555) 000-0000`,
-`hello@yourbusiness.com`) and a neutral placeholder color system. When onboarding a real client,
-swap the placeholders for that client's real business identity, services, service area, colors,
-logo, photos, and copy — but **keep the structure, section rhythm, nav pattern, dark sections,
-footer layout, and design system intact**.
-
-> Treat the placeholder tokens as fill‑in‑the‑blank fields. Do not invent client facts; ask the
-> operator or leave the placeholder until real content is provided.
-
-### Placeholder token reference
-
-| Token | Meaning |
-| --- | --- |
-| `Your Business Name` | The client's business name (wordmark + everywhere) |
-| `Service One` … `Service Six` | The six core services (one dedicated page each) |
-| `service-one.html` … `service-six.html` | Service page filenames under `/services/` |
-| `[City]` | Primary city / physical-location city |
-| `[City 2]` … `[City 6]` | Additional service-area cities, in priority order |
-| `city-one.html` … `city-six.html` | City page filenames under `/areas/` |
-| `[Region]` | The broader region the business serves |
-| `(555) 000-0000` / `tel:+15550000000` | Phone (display / link) |
-| `hello@yourbusiness.com` | Contact email |
-| `yourbusiness.com` | Canonical domain (used in canonical/OG URLs + sitemap) |
-
-### Placeholder color system (swap per client)
-
-Defined once via CSS custom properties / Tailwind config and reused everywhere. Neutral by design
-so a client palette drops in cleanly:
-
-- **Neutral dark** `#1A1A2E` — dark backgrounds, dark sections, footer, structural surfaces.
-- **Accent** `#E63946` — CTAs, highlights, accent text/icons. This is the single "pop" color and
-  the easiest thing to rebrand: change the accent token and the site re-skins.
-- Whites for body backgrounds, neutral grays for muted text.
-
-Do not reintroduce a hardcoded brand palette until the client's real colors are confirmed. When
-they are, update the CSS custom properties + Tailwind `theme.extend.colors` first, then sweep any
-remaining inline color literals.
-
-### Integration placeholders (wire up per client)
-
-The template ships with clearly-marked placeholder comments where third‑party embeds go. Replace
-the comment with the client's real embed when available:
-
-- `<!-- GHL CONTACT FORM EMBED GOES HERE -->`
-- `<!-- GHL CHAT WIDGET SCRIPT GOES HERE -->`
-- `<!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->`
-- `<!-- GHL REVIEW WIDGET EMBED GOES HERE -->`
-- `<!-- GOOGLE MAPS EMBED GOES HERE -->`
-- Social share image: `brand_assets/og-image.jpg` (1200×630) — create before launch.
-
-## Site Architecture
-
-- Homepage (`index.html`)
-- About (`about.html`)
-- Contact / Thank You (`thank-you.html` — `noindex, nofollow`)
-- 6 service pages at `/services/service-[one..six].html`
-- 6 city pages at `/areas/city-[one..six].html`
+# CLAUDE.md — Frontend Website Rules
 
 ## Always Do First
 
-Invoke the **frontend-design** skill before writing any frontend code, every session, no exceptions.
+Invoke the frontend-design skill before writing any frontend code **if it is available in this environment.** (It may not be installed in Claude Code's env — if it throws a not-found warning, proceed without it rather than stopping. Do not let a missing skill block the build.)
 
-## Content Writing Methodology
+For all page copy and content, read and follow SEO-CONTENT-PROMPT.md as the PRIMARY writing methodology before writing any page content. SEO-CONTENT-PROMPT.md takes precedence over all other content guidance.
 
-For all page COPY/content, read and follow `SEO-CONTENT-PROMPT.md` (in the project root) as the
-PRIMARY writing methodology before writing any page content. Apply the COMPLETE methodology — the
-writing mission, all optimization guidelines (Google Algorithm + AI Systems), the balanced writing
-approach, content structure, language guidelines, quality signals, and the Words to Avoid list. The
-Local SEO Requirements below govern TECHNICAL implementation and work in tandem. If wording/content
-approach ever conflicts, `SEO-CONTENT-PROMPT.md` takes precedence.
+---
 
-## Local SEO Requirements (technical)
+## Client Context — Mesquite Sheds & More
 
-This is a local service business template — local SEO is the primary lead driver once customized.
+### Business Identity
 
-### Per-page metadata (every page)
-- Unique `<title>` under 60 chars: `"[Page Topic] | Your Business Name in [City]"`
-- Unique `<meta name="description">` under 160 chars: include a service, a city, and a CTA with phone
-- `<meta name="keywords">` with relevant local terms (service + city combinations)
+- **Business name:** Mesquite Sheds & More (also referred to as Mesquite Sheds)
+- **Industry:** Portable building dealer — storage sheds, carports, cabins/portable offices, and custom-built structures
+- **Owners/Operators:** Manny and Alondra (run the office; the faces of the business)
+- **Supplier/Manufacturer:** Stor-Mor (Mesquite Sheds is an authorized Stor-Mor dealer, dealer #878 — dealer page at stormor.shedsuite.com/878). Buildings are built at the Stor-Mor shop/factory and delivered to the customer.
+- **Physical address:** 97 E Bus Hwy 83, Alamo, TX 78516 (corner of Border Rd and Bus 83) — this is a retail lot with on-site inventory; the address IS used publicly
+- **Phone/Text:** (956) 586-6093 — display format. Use E.164 (`+19565866093`) for all `tel:` href attributes and the JSON-LD `telephone` field; use the display format in visible copy, meta/OG/Twitter descriptions, and alt text.
+- **Email:** sandrareynashedsup2023@yahoo.com
+- **Domain:** mesquitesheds.com
+- **Founded:** [NEEDS INPUT]
+- **Licenses/Certifications:** [NEEDS INPUT]
+- **Location base:** Alamo, Rio Grande Valley (RGV), Texas
+- **Client focus:** Residential and commercial — homeowners needing extra storage and businesses needing storage/vehicle cover. Storage sheds are the primary moneymaker; carports are a strong secondary product line they actively want to push.
+
+### Service Area
+
+**6 dedicated city pages (in priority order — use this order everywhere):**
+
+1. Alamo (home base — NAP anchor, "near me" intent)
+2. McAllen (biggest population in the Valley — top search-volume target, gets the most content depth)
+3. Edinburg
+4. Mission
+5. Pharr
+6. Harlingen
+
+Mesquite Sheds is located in Alamo and serves the entire Rio Grande Valley (RGV). Alamo anchors the homepage, Google Business Profile, NAP, and schema (the physical location); McAllen is the biggest volume swing. These 6 cities get dedicated SEO pages because they are the priority markets and all fall within the free-delivery radius. Other RGV cities (Weslaco, San Juan, Donna, Mercedes, San Benito, La Feria, etc.) can be referenced in body copy and service-area schema as "and surrounding RGV areas" without requiring dedicated pages.
+
+All cities are in the Rio Grande Valley, Texas. The site should feel locally rooted in the RGV. **Free delivery & set-up is offered within 50 miles of the Alamo lot** — keep dedicated city pages inside that radius so the delivery promise holds.
+
+### Services (5 dedicated service pages — built around sheds as the moneymaker + carports as the strong secondary)
+
+- Storage Sheds → services/storage-sheds.html
+- Carports → services/carports.html
+- Custom Buildings (Build Your Own) → services/custom-buildings.html
+- Cabins & Portable Offices → services/cabins-portable-offices.html
+- Financing (No Credit Check / Rent-to-Own) → services/financing.html
+
+**Why these 5:** Storage sheds are the flagship moneymaker and get the most content and keyword investment. Carports are a dedicated page because the client actively wants to sell them, and they carry distinct buyer intent (vehicle/shade/BBQ cover, home or business) from storage. Custom Buildings captures the build-to-order angle (pick style, colors, add-ons; built at the shop and delivered). Cabins & Portable Offices splits out the live-in and office-conversion buyers, who search different terms than storage shoppers — kept as a dedicated page (NOT folded into Storage Sheds) to capture that distinct intent. Financing is an evergreen funnel page covering buy-outright vs. rent-to-own and the no-credit-check angle.
+
+**Additional offerings / selling points (mention in body copy/footer/GBP, not standalone pages):**
+- On-site inventory ready for immediate delivery (no wait)
+- Custom build-to-order from the factory (style, colors, add-ons)
+- Free delivery & set-up within 50 miles
+- No credit check
+- Affordable monthly payments
+- Rent-to-own or buy outright
+- Backed by Stor-Mor construction standards/quality
+- Contracts signed in person at the Alamo lot
+
+### Service Details
+
+**Specialty / Core Focus:**
+- Portable storage sheds — the moneymaker, lead with these in copy and headlines
+- Carports — strong secondary, for one or two vehicles, shade, or backyard/BBQ use; home and business customers
+- Both buy-from-inventory and custom build-to-order paths
+
+**Product Types & Use Cases:**
+- Storage sheds (storage, live-in, office conversion)
+- Carports (1-2 car, shade structure, BBQ/entertaining, commercial use)
+- Custom buildings / warehouses (style, colors, add-ons selected by customer)
+- Residential & commercial
+
+**Sales Process:**
+- Walk-in or call the Alamo lot
+- Buy from on-site inventory OR submit a custom build order
+- Custom orders built at the Stor-Mor shop and delivered to the customer's address
+- Carport pricing is size-based and quote-driven (customer tells us the size needed → we provide pricing) — do NOT publish fixed carport prices; route to a quote/visit/call CTA instead
+- Contracts are signed in person
+
+### Project Proof / Social Proof
+
+- [NEEDS INPUT] — no case studies or named project proof provided yet
+- Use the on-site inventory, free delivery & set-up, no-credit-check financing, and Stor-Mor backing as primary trust signals until project proof is available
+
+### Key Differentiators
+
+- On-site inventory ready for immediate delivery — plus full custom build-to-order
+- Free delivery & set-up within 50 miles of Alamo
+- No credit check; affordable monthly payments
+- Rent-to-own or buy outright
+- Backed by Stor-Mor's construction standards and materials
+- Local and family-run — Manny and Alondra in the office
+- Serves both home and business customers
+
+### Brand Voice & Tone
+
+- Casual, personal, warm, and community/family-oriented
+- Friendly and welcoming, bilingual-friendly RGV feel (the client's own posts open with "Halo Halo!!!" and a personal "come visit us" energy)
+- Manny and Alondra are the faces of the business — reference them by name where appropriate
+- NOTE: the client's social posts are very exclamation-heavy and all-caps in places. For website copy, keep the warmth and personality but temper the punctuation/caps into clean, readable web copy — the personable tone stays, the social-post styling does not carry into headers and body text.
+
+### Brand Tagline
+
+- [NEEDS INPUT] — no official tagline confirmed yet
+- Working themes from client copy: "the building of your dreams, built and delivered right to you" / "the extra space you've been needing" — confirm an official tagline with the client if one exists
+
+### Current Promotions (time-limited — keep OUT of permanent page copy)
+
+- Summer Sale: 5% off custom buildings
+- $99 Down on buildings $6,000 or less
+- These are limited-time offers — place them in a swappable homepage banner/promo strip, NOT baked into permanent page bodies or metadata, so they can be rotated out without re-editing pages.
+
+### Social Proof
+
+- [NEEDS INPUT] — review count/reputation status not yet confirmed
+- Do NOT include review widgets, star ratings, or review counts anywhere on the site until confirmed with client
+- Use inventory availability, free delivery & set-up, financing, and Stor-Mor backing as the primary trust signals instead
+
+### Brand Colors
+
+- **Primary — Barn Red:** `#A8342A` — main brand color, primary CTAs, key accents/headlines. Chosen to lead with red per client direction; warm/brick-toned rather than a stock alert-red, ties to classic barn/shed imagery.
+- **Secondary — Espresso Charcoal:** `#2B2420` — dark sections, header/footer backgrounds, body text on light surfaces. Grounds the red without going stark black.
+- **Accent — Warm Gold/Tan:** `#C8923A` — secondary CTAs, hover states, icon/detail accents. Echoes warm RGV sun + wood/metal building materials.
+- **Neutral Background — Warm Cream:** `#FAF5EC` — page backgrounds in place of stark white, keeps the casual/family warmth.
+- **Body Text:** `#3A332E` — deep neutral brown-gray, pairs with the cream background for readable body copy.
+- Working palette set per client direction (red required as a brand color) — confirm final sign-off with Manny & Alondra before launch, but build against these hex values now rather than placeholders.
+- Do not default to Tailwind's stock palette (no red-500/red-600, no indigo/blue defaults) — these custom hex values are the standard going forward.
+- **TOKEN NOTE:** the template ships a provisional auto-glass palette (`#E63946` red, token names `glass`/`ember`, dark `#1A1A2E`). These MUST be fully replaced with the Mesquite palette above — including inline hex literals and `rgba(230,57,70,…)` shadow/wash values across all pages, not just the `:root` block. Rename `glass`/`ember` tokens to barn-red-semantic names.
+
+### Assets Status
+
+- **Logo: PROVIDED** — raster photo of the printed "Sheds Up" owl logo (no vector source yet). Recolored to the brand palette: **charcoal `#2B2420`** for use on light/cream sections, **cream `#FAF5EC`** for use on dark sections (footer, dark nav-on-scroll). Files in `brand_assets/`. Do NOT use a white-filter swap on dark backgrounds — use the cream version. ACTION: ask Manny & Alondra if an original vector/design file exists for a future quality upgrade (pure asset-swap, no rework).
+- Hero imagery/video: [NEEDS INPUT] — template ships `brand_assets/Hero_background.jpg` placeholder; replace with real Mesquite shed/lot photo
+- Product/inventory photos: [NEEDS INPUT] — homepage recent-work gallery currently uses placehold.co placeholders
+- og-image.jpg: [NEEDS INPUT] — referenced sitewide but NOT yet created; needs a 1200×630 social image
+- Check brand_assets/ folder once client provides logo and photo assets
+
+### Site Architecture
+
+- Cloned from master template `jhurtado86/nexor-template` (plain HTML, Tailwind CDN) — template is never modified directly; each client site is a clone.
+- **Template ships generic filenames** (`services/service-one.html` … `service-six.html`, `areas/city-one.html` … `city-six.html`). For this client, **rename to semantic, keyword-bearing slugs** (below) and update all internal links + sitemap to match. Semantic slugs carry the local-SEO keyword in the URL.
+
+**14 pages total (template's 6th services/ slot is left unused):**
+
+- index.html (homepage)
+- about.html
+- thank-you.html  *(NO contact.html — template ships thank-you only; contact is a `#contact` section on the homepage. Route all "contact" CTAs to call/text/quote, never to a contact page.)*
+- services/storage-sheds.html
+- services/carports.html
+- services/custom-buildings.html
+- services/cabins-portable-offices.html
+- services/financing.html
+- areas/alamo.html
+- areas/mcallen.html
+- areas/edinburg.html
+- areas/mission.html
+- areas/pharr.html
+- areas/harlingen.html
+
+(5 service pages + 6 city pages + home/about/thank-you = 14 pages. ALL city pages live under `/areas/`, ALL service pages under `/services/`. Internal links are root-relative with a leading slash — see Canonical Host Rule.)
+
+### Template Sections to REPURPOSE / DELETE for this client
+
+The template was forked from an auto-glass (OptiGlass) site and carries home-services artifacts that don't fit a portable-building dealer. Handle these during the build:
+
+- **Insurance & Financing section** (`#insurance`, carrier pills Allstate/Geico/Progressive/Farmers) — a shed dealer does NOT bill insurance carriers. **REPURPOSE** the homepage strip into a **Financing / Rent-to-Own / No-Credit-Check trust band** (RTO is a genuine differentiator for portable buildings). Remove the fake carrier pills. Update the "Insurance" nav + footer links accordingly. NOTE: service pages reuse the `#insurance` id for their pricing section — decouple/rename carefully so pricing isn't broken.
+- **Orphan auto-glass photos** in `brand_assets/work/` (windshield/headlight/Ferrari McAllen photos) — irrelevant to a shed dealer. DELETE; replace with real Mesquite product photos when provided.
+- **`glass` / `ember` color token names** — auto-glass holdover. Rename to barn-red-semantic tokens (see Brand Colors TOKEN NOTE).
+
+### Outstanding Launch Blockers
+
+- Photo assets (hero, product/inventory, og-image) not yet provided
+- License/certification details not yet provided
+- Founded year not yet confirmed
+- Official tagline not yet confirmed
+- Review/reputation status not yet confirmed
+- (Logo is now provided — see Assets Status.)
+
+---
+
+## Local SEO Requirements
+
+Every page must follow these SEO standards. Local SEO is the primary lead driver.
+
+## Canonical Host Rule — READ FIRST (prevents Google indexing failures)
+
+This rule exists because a mismatch between the host declared in code and the host
+Vercel actually serves causes Google to reject pages with "Page with redirect" or
+"Discovered – currently not indexed" — sometimes for weeks. It is silent: the site
+looks fine to visitors but pages never index. Follow this rule and it never happens.
+
+### The canonical host for THIS project is:
+**https://www.mesquitesheds.com**   ← set ONCE. WWW confirmed (Vercel will point to www for this project — overrides the Nexor non-www default below).
+(Nexor AI default for new builds: NON-www, unless the client requires www. This project uses WWW.)
+
+### Every ABSOLUTE URL in the codebase MUST use this exact host:
+- `<link rel="canonical">` tags
+- `og:url`, `og:image`, `twitter:image`, and any twitter URL meta
+- ALL JSON-LD fields: `url`, `@id`, and every `BreadcrumbList` `item` URL
+- `sitemap.xml` — every `<loc>` entry
+- `robots.txt` — the `Sitemap:` line
+Use the host consistently, including trailing-slash style (pick `/` or no-`/` and
+keep it uniform across all schema `url` fields).
+
+### Internal links MUST be root-relative — NEVER absolute:
+- Correct:   `<a href="/services/storage-sheds.html">`
+- WRONG:     `<a href="https://www.mesquitesheds.com/services/storage-sheds.html">`
+Root-relative internal links inherit the visitor's current host, so they can NEVER
+create a host conflict. This single rule prevents the most common cause of the bug.
+(Asset paths in subdirectories also stay root-relative with a leading slash, e.g.
+`/brand_assets/image.jpg` — relative paths break from inside /services/ and /areas/.)
+
+### Vercel must AGREE with the code:
+- The canonical host above must be set as PRIMARY (Production) in Vercel → Domains.
+- The OTHER version (www or non-www) must be set to 301/308 redirect TO the primary.
+- Code host + Vercel redirect direction must point the same way. If they disagree,
+  Google overrules the canonical tag and indexing breaks.
+
+### Pre-launch verification (run before every go-live):
+Audit all absolute URLs in the project. Report any host that does not match the
+canonical host above — check canonical tags, og/twitter meta, JSON-LD
+url/@id/BreadcrumbList, sitemap.xml, and robots.txt. Also confirm every internal
+nav/footer link is root-relative, not absolute. Report mismatches; do not auto-fix
+until confirmed.
+
+### Post-launch GSC check (catches conflict on day one, not week three):
+1. Submit the sitemap (correct host).
+2. URL-inspect the homepage: does "User-declared canonical" EXACTLY match
+   "Google-selected canonical"? If they differ → host conflict → fix before
+   requesting indexing.
+3. Request indexing on priority pages (service pages first, then primary city,
+   then remaining cities, then About) using the canonical-host versions.
+4. "Page with redirect" entries for the non-canonical host versions are CORRECT
+   and expected — do not try to "fix" or re-request those.
+
+### Per-Page Metadata
+
+- Unique `<title>` tag, under 60 characters, format: "[Page Topic] | Mesquite Sheds & More"
+- Unique `<meta name="description">`, under 160 characters — include product, city, and phone number CTA
+- `<meta name="keywords">` with relevant local terms (product + city combinations)
 - `<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">`
 - `<link rel="canonical">` pointing to that page's own URL
-- `<html lang="en">` and a proper viewport meta
+- `<html lang="en">` and proper viewport meta
 
-### Open Graph + Twitter (every page)
-- `og:title`, `og:description`, `og:url`, `og:type`, `og:image`, `og:locale`, `og:site_name`
-- `twitter:card` (summary_large_image), `twitter:title`, `twitter:description`, `twitter:image`
-- `og:image` / `twitter:image` → 1200×630 social share image (flag if not yet created)
+### Open Graph + Twitter Cards (every page)
+
+- og:title, og:description, og:url, og:type, og:image, og:locale, og:site_name
+- twitter:card (summary_large_image), twitter:title, twitter:description, twitter:image
+- og:image and twitter:image → flag if og-image.jpg not yet created
 
 ### Structured Data (JSON-LD)
-- Homepage: `LocalBusiness` schema. Include `name`, `telephone`, `email`, `priceRange`,
-  `openingHoursSpecification`, `areaServed` (the cities), `hasOfferCatalog` (the six services).
-  Add `PostalAddress` and `aggregateRating` only when the client has a real address / real reviews.
-- Service pages: `Service` schema referencing the parent business.
-- City pages: `areaServed` for that specific city.
-- Validate at search.google.com/test/rich-results before launch.
 
-### Visible on-page SEO
+- Homepage: LocalBusiness schema — name, phone, email, url, full postal address (streetAddress, addressLocality, addressRegion, postalCode), geo coordinates, areaServed (6 dedicated cities + "Rio Grande Valley" broad area), hasOfferCatalog (all core product/service pages)
+- Service/product pages: Service or Product schema referencing the parent business
+- City pages: areaServed for that specific city
+- Include the physical address — this is a retail location with a public storefront (97 E Bus Hwy 83, Alamo, TX 78516)
+- Validate at search.google.com/test/rich-results before launch
+
+### Visible On-Page SEO
+
 - Exactly ONE `<h1>` per page with the page's primary keyword
-- H2/H3 for hierarchy, no skipped levels
-- City names appear in human-readable body text, not just metadata
-- Service + city combinations appear naturally in copy
-- All images need descriptive alt text including service/location context where relevant
+- H2/H3 for section hierarchy, no skipped levels
+- City names in human-readable body text, not just metadata
+- Product + city combinations appearing naturally in copy
+- All images need descriptive alt text with product/location context
 
-### City pages — anti-duplicate rule (critical when customizing)
-- Each city page MUST have 30–40% unique content minimum
-- Do NOT just swap the city name across otherwise-identical pages — Google penalizes doorway pages
-- Reference local landmarks, neighborhoods, highways, or area-specific details per city
-- Unique intro paragraph + unique "why [City] chooses us" angle per page
+### City Pages — Anti-Duplicate Rule
 
-### Technical SEO files
-- `sitemap.xml` listing all indexable pages (homepage, about, all service + city pages; exclude thank-you)
-- `robots.txt` allowing crawl, disallowing the thank-you page, pointing to the sitemap
-- Thank-you page must have `<meta name="robots" content="noindex, nofollow">`
+- Each city page MUST have 30-40% unique content minimum
+- Do NOT swap city name across otherwise identical pages — Google penalizes this
+- Each page references local landmarks, neighborhoods, highways, area-specific details
+- Unique intro paragraph and unique "why [city] chooses Mesquite Sheds & More" angle per page
+- (Template city pages ship the neighborhoods + unique-intro scaffolding with `[City]` placeholder tokens — fill with real per-city content, do not leave tokens.)
 
-### Title/description patterns
-- Homepage: `"[Primary Service] & [Secondary] in [City] | Your Business Name"`
-- Service page: `"[Service] in [City] | Your Business Name"`
-- City page: `"[Primary Service] in [City] | Your Business Name"`
+### Technical SEO Files
 
-## Final CTA Section Pattern (every page)
+- sitemap.xml lists all indexable pages (exclude thank-you page)
+- robots.txt allows crawl, disallows thank-you page, points to sitemap
+- thank-you page must have `<meta name="robots" content="noindex, nofollow">`
 
-All pages end with the same final CTA section just before the footer:
-- Background: `brand_assets/cta-background.jpg` with a dark overlay (~55–65% opacity) for text readability
-- Headline + supporting copy + dual CTAs (Call + Get a Free Quote)
-- Same treatment across all pages for brand consistency
+### Per-Page Title Pattern
 
-## Brand Assets
+- Homepage: "Storage Sheds in Alamo, TX | Mesquite Sheds & More" (lead with the moneymaker — do NOT broaden the title to carports; carports rank on their own page; signal the full range in the meta description)
+- Service page: "[Product] in Alamo, TX | Mesquite Sheds & More"
+- City page: "Storage Sheds in [City], TX | Mesquite Sheds & More"
 
-Always check the `brand_assets/` folder before designing. It may hold logos, color guides, style
-guides, or images. If real assets exist there, use them — do not use placeholders where real assets
-are available. If a logo is present, use it. If a palette is defined, use those exact values.
-
-- Hero background: `brand_assets/Hero_background.jpg`
-- Final-CTA background: `brand_assets/cta-background.jpg`
-- Logo: styled text wordmark (`Your Business Name`) until a client logo is provided.
+---
 
 ## Reference Images
 
-For THIS template we build ORIGINAL pages from the brief, NOT matching a provided reference. The
-reference-matching rules apply ONLY when a reference image is explicitly provided.
+NOTE: For THIS project we are building ORIGINAL pages from the Client Context, NOT matching a provided reference. The reference-matching rules below apply ONLY when a reference image is explicitly provided. Otherwise, design original, high-craft pages per the guardrails.
 
-If a reference image is provided: match layout, spacing, typography, and color exactly. Swap in
-placeholder content (images via https://placehold.co/, generic copy). Do not improve or add to the
-design. Screenshot your output, compare against the reference, fix mismatches, re-screenshot — at
-least 2 comparison rounds. Stop only when no visible differences remain or the user says so.
+- If a reference image is provided: match layout, spacing, typography, and color exactly. Do not improve or add to the design.
+- If no reference image: design from scratch with high craft per the guardrails below.
+- Screenshot output, compare against reference, fix mismatches, re-screenshot. At least 2 comparison rounds.
 
-If no reference image: design from scratch with high craft (see guardrails below).
+---
 
 ## Local Server
 
-- Always serve on localhost — never screenshot a `file:///` URL.
-- Start the dev server: `node serve.mjs` (serves the project root at http://localhost:3000).
-- `serve.mjs` lives in the project root. Start it in the background before taking screenshots.
+- Always serve on localhost — never screenshot a file:/// URL
+- Start the dev server: `node serve.mjs` (serves project root at http://localhost:3000)
+- serve.mjs lives in the project root. Start it in the background before screenshots.
 - If the server is already running, do not start a second instance.
+
+---
 
 ## Screenshot Workflow
 
 - Always screenshot from localhost: `node screenshot.mjs http://localhost:3000`
-- Screenshots save to `./temporary screenshots/screenshot-N.png` (auto-incremented, never overwritten).
-- Optional label suffix: `node screenshot.mjs http://localhost:3000 label` → `screenshot-N-label.png`
-- `screenshot.mjs` lives in the project root. Use it as-is.
-- After screenshotting, read the PNG from `temporary screenshots/` with the Read tool and analyze it.
-- When comparing, be specific: "heading is 32px but reference shows ~24px", "card gap is 16px but should be 24px".
-- Check: spacing/padding, font size/weight/line-height, colors (exact hex), alignment, border-radius, shadows, image sizing.
+- Screenshots saved to ./temporary screenshots/screenshot-N.png
+- After screenshotting, read the PNG with the Read tool
+- Be specific when comparing: "heading is 32px but reference shows ~24px"
+- Check: spacing/padding, font size/weight, colors (exact hex), alignment, border-radius, shadows, image sizing
+
+---
 
 ## Output Defaults
 
-- Self-contained HTML files, styles inline in `<style>`/Tailwind config, unless the user says otherwise.
-- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`.
-- Placeholder images: https://placehold.co/WIDTHxHEIGHT.
-- Mobile-first responsive.
+- Plain HTML + Tailwind CDN — no build step
+- Tailwind CSS via CDN: `<script src="https://cdn.tailwindcss.com"></script>`
+- Placeholder images: https://placehold.co/WIDTHxHEIGHT
+- Mobile-first responsive
+- Single file per page unless otherwise specified
+
+---
+
+## Brand Assets
+
+- Always check brand_assets/ folder before designing
+- Use real assets where available — do not use placeholders when real assets exist
+- Logo is provided (see Assets Status). Hero/product/og-image still pending — use placehold.co at final dimensions and write final alt text now.
+
+---
 
 ## Anti-Generic Guardrails
 
-- **Colors**: Never use default Tailwind palette (indigo-500, blue-600, etc.). Drive everything from
-  the brand tokens and derive shades from them.
-- **Shadows**: Never use flat `shadow-md`. Use layered, color-tinted shadows with low opacity.
-- **Typography**: Never use the same font for headings and body. Pair a display/serif with a clean
-  sans. Tight tracking (-0.03em) on large headings, generous line-height (1.7) on body.
-- **Gradients**: Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
-- **Animations**: Only animate `transform` and `opacity`. Never `transition-all`. Spring-style easing.
-- **Interactive states**: Every clickable element needs hover, focus-visible, and active states. No exceptions.
-- **Images**: Add a gradient overlay (`bg-gradient-to-t from-black/60`) and a color treatment layer with `mix-blend-multiply`.
-- **Spacing**: Intentional, consistent spacing tokens — not random Tailwind steps.
-- **Depth**: Surfaces use a layering system (base → elevated → floating), not all on one z-plane.
+- **Colors:** Never use default Tailwind palette (indigo-500, blue-600, or stock red-500/red-600). Use the confirmed Mesquite Sheds & More palette — primary `#A8342A` (barn red), secondary `#2B2420` (espresso charcoal), accent `#C8923A` (warm gold/tan), background `#FAF5EC` (warm cream), body text `#3A332E`. See Brand Colors section above for usage notes.
+- **Shadows:** Never use flat shadow-md. Use layered, color-tinted shadows with low opacity.
+- **Typography:** Never use the same font for headings and body. Apply tight tracking (-0.03em) on large headings, generous line-height (1.7) on body.
+- **Gradients:** Layer multiple radial gradients. Add grain/texture via SVG noise filter for depth.
+- **Animations:** Only animate transform and opacity. Never transition-all. Use spring-style easing.
+- **Interactive states:** Every clickable element needs hover, focus-visible, and active states. No exceptions.
+- **Images:** Add gradient overlay (bg-gradient-to-t from-black/60) and color treatment layer with mix-blend-multiply.
+- **Spacing:** Use intentional, consistent spacing tokens — not random Tailwind steps.
+- **Depth:** Surfaces should have a layering system (base → elevated → floating).
+
+---
 
 ## Hard Rules
 
-- Do not add sections, features, or content not in the reference (when a reference is provided).
-- Do not "improve" a reference design — match it (when a reference is provided).
-- Do not stop after one screenshot pass.
-- Do not use `transition-all`.
-- Do not use default Tailwind blue/indigo as the primary color.
-
-## Git Discipline
-
-- Commit or push only when the user asks. If on the default branch, branch first.
-- Keep the placeholder tokens consistent across files when editing — a renamed service or city must
-  update its filename, all hrefs, nav/footer labels, schema, title/meta, and breadcrumb together.
+- Do not add sections or content not in the reference (when a reference is provided)
+- Do not "improve" a reference design — match it (when a reference is provided)
+- Do not stop after one screenshot pass
+- Do not use transition-all
+- Do not use default Tailwind blue/indigo as primary color
+- Do not ship the provisional auto-glass red `#E63946` or `glass`/`ember` token names — replace fully with the Mesquite barn-red palette
+- Do not add review widgets or star ratings until reputation/review status is confirmed with client
+- Do not publish fixed carport prices — carport pricing is size-based and quote-driven; route to a quote/visit/call CTA
+- Do not bake time-limited promotions (Summer Sale, $99 down) into permanent page copy or metadata — use a swappable homepage banner
+- Do not link to a contact.html — it does not exist; contact is a homepage `#contact` section, CTAs route to call/text/quote
+- Do not fabricate license numbers or credentials — flag as [NEEDS INPUT] until provided (phone, email, and domain are now confirmed, see Business Identity)
