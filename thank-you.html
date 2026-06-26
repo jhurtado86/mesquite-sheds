@@ -17,11 +17,10 @@
       theme: {
         extend: {
           colors: {
-            glass:  { DEFAULT: '#E63946', 400: '#E04250', 300: '#EC5A66', 200: '#F2C9CD', 100: '#FCEEEF' },
-            ink:    { DEFAULT: '#1A1A2E', 800: '#1A1A2E', 700: '#26263E', 600: '#2E2E46' },
-            steel:  { DEFAULT: '#26263E', 700: '#2E2E46', 600: '#34344E' },
-            ember:  { DEFAULT: '#E63946', 400: '#D62F3D', 300: '#F2737D' },
-            slate:  { light: '#5B5B68', muted: '#8E8E9C' },
+            primary: { DEFAULT: '#E63946', dark: '#D62F3D', mid: '#E04250', light: '#EC5A66', 300: '#F2737D', pale: '#F2C9CD', ultra: '#FCEEEF' },
+            ink:     { DEFAULT: '#1A1A2E', 800: '#1A1A2E', 700: '#26263E', 600: '#2E2E46', 500: '#34344E' },
+            muted:   { light: '#5B5B68', DEFAULT: '#8E8E9C' },
+            accent:  { DEFAULT: '#F59E0B' },
           },
           fontFamily: {
             display: ['Barlow', 'sans-serif'],
@@ -30,8 +29,8 @@
           boxShadow: {
             'card':    '0 2px 8px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04)',
             'card-lg': '0 8px 32px rgba(0,0,0,0.10), 0 2px 6px rgba(0,0,0,0.05)',
-            'glow':    '0 0 28px rgba(26,26,46,0.16)',
-            'cta':     '0 4px 20px rgba(230,57,70,0.30)',
+            'glow':    '0 0 28px rgba(var(--color-ink-rgb),0.16)',
+            'cta':     '0 4px 20px rgba(var(--color-primary-rgb),0.30)',
           },
           letterSpacing: { tight: '-0.03em' },
           lineHeight:    { body: '1.7' },
@@ -43,31 +42,54 @@
   <style>
     /* PROVISIONAL COLORS — replace when client brand colors confirmed */
     :root {
-      --glass-primary: #E63946;
-      --glass-hover:   #D62F3D;
-      --glass-light:   #EC5A66;
-      --glass-pale:    #F2C9CD;
-      --glass-ultra:   #FCEEEF;
-      --ink:           #1A1A2E;
-      --ink-body:      #1A1A2E;
-      --ember:         #E63946;
-      --ember-hover:   #D62F3D;
-      --slate:         #5B5B68;
-      --slate-muted:   #8E8E9C;
+      /* CENTRALIZED PROVISIONAL PALETTE — neutral names, values UNCHANGED. Pass-2 swaps these to barn-red. */
+      /* primary (red) */
+      --color-primary:        #E63946;
+      --color-primary-rgb:    230,57,70;
+      --color-primary-dark:   #D62F3D;
+      --color-primary-mid:    #E04250;
+      --color-primary-light:  #EC5A66;
+      --color-primary-300:    #F2737D;
+      --color-primary-pale:   #F2C9CD;
+      --color-primary-ultra:  #FCEEEF;
+      --color-primary-tint-1: #F0888F;
+      --color-primary-tint-2: #F2A6AC;
+      --color-primary-tint-3: #F09AA2;
+      /* ink (dark / navy) */
+      --color-ink:            #1A1A2E;
+      --color-ink-rgb:        26,26,46;
+      --color-ink-900-rgb:    22,22,38;
+      --color-ink-700:        #26263E;
+      --color-ink-600:        #2E2E46;
+      --color-ink-500:        #34344E;
+      /* neutral grays */
+      --color-gray-700:       #54545F;
+      --color-gray-600:       #5B5B68;
+      --color-gray-500:       #8E8E9C;
+      --color-gray-450:       #9A9AA8;
+      --color-gray-400:       #9C9CAC;
+      --color-gray-350:       #A6A6B6;
+      /* surfaces */
+      --color-surface-300:    #D8D8E2;
+      --color-surface-200:    #D0D0DA;
+      --color-surface-150:    #ECECF1;
+      --color-surface-100:    #F3F3F6;
+      /* accent (amber) */
+      --color-accent:         #F59E0B;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Nunito', sans-serif; background: #fff; color: var(--ink-body); }
+    body { font-family: 'Nunito', sans-serif; background: #fff; color: var(--color-ink); }
     h1,h2,h3,h4 { font-family: 'Barlow', sans-serif; }
 
-    .dark-section { background: #1A1A2E; }
+    .dark-section { background: var(--color-ink); }
     .dark-section .text-white        { color: #fff !important; }
-    .dark-section .text-slate-light  { color: #9C9CAC !important; }
+    .dark-section .text-muted-light  { color: var(--color-gray-400) !important; }
 
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(26,26,46,0.12) 30%, rgba(26,26,46,0.12) 70%, transparent 100%);
+      background: linear-gradient(90deg, transparent 0%, rgba(var(--color-ink-rgb),0.12) 30%, rgba(var(--color-ink-rgb),0.12) 70%, transparent 100%);
     }
 
     /* ── Nav wordmark ── */
@@ -77,15 +99,15 @@
       letter-spacing: -0.02em; color: #fff; line-height: 1;
       transition: color 0.25s cubic-bezier(0.4,0,0.2,1);
     }
-    .nav-wordmark .plus { color: var(--ember); }
-    #navbar.scrolled .nav-wordmark { color: var(--ink-body); }
+    .nav-wordmark .plus { color: var(--color-primary); }
+    #navbar.scrolled .nav-wordmark { color: var(--color-ink); }
 
     .footer-wordmark {
       font-family: 'Barlow', sans-serif;
       font-weight: 800; font-size: 28px;
       letter-spacing: -0.02em; color: #fff; line-height: 1;
     }
-    .footer-wordmark .plus { color: var(--ember); }
+    .footer-wordmark .plus { color: var(--color-primary); }
 
     /* ── Nav ── */
     #navbar {
@@ -96,10 +118,10 @@
                   border-color 0.40s cubic-bezier(0.4,0,0.2,1),
                   box-shadow 0.40s cubic-bezier(0.4,0,0.2,1);
     }
-    #navbar .text-slate-light          { color: rgba(255,255,255,0.68) !important; }
+    #navbar .text-muted-light          { color: rgba(255,255,255,0.68) !important; }
     #navbar .hover\:text-white:hover   { color: rgba(255,255,255,1) !important; }
     #navbar #hamburger                 { color: rgba(255,255,255,0.80) !important; border-color: rgba(255,255,255,0.18) !important; }
-    #mobile-menu                       { background: rgba(26,26,46,0.96); backdrop-filter: blur(18px); }
+    #mobile-menu                       { background: rgba(var(--color-ink-rgb),0.96); backdrop-filter: blur(18px); }
     #mobile-menu a.mobile-nav-link     { color: rgba(255,255,255,0.68) !important; }
     #mobile-menu a.mobile-nav-link:hover { color: rgba(255,255,255,1) !important; background: rgba(255,255,255,0.06) !important; }
     #mobile-menu                       { border-top-color: rgba(255,255,255,0.08) !important; }
@@ -107,22 +129,22 @@
     #navbar.scrolled {
       background: rgba(255,255,255,0.72);
       backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
-      border-bottom-color: rgba(26,26,46,0.07);
+      border-bottom-color: rgba(var(--color-ink-rgb),0.07);
       box-shadow: 0 1px 24px rgba(0,0,0,0.06);
     }
-    #navbar.scrolled .text-slate-light         { color: var(--slate) !important; }
-    #navbar.scrolled .hover\:text-white:hover  { color: var(--ink-body) !important; }
-    #navbar.scrolled #hamburger                { color: var(--ink-body) !important; border-color: rgba(26,26,46,0.16) !important; }
+    #navbar.scrolled .text-muted-light         { color: var(--color-gray-600) !important; }
+    #navbar.scrolled .hover\:text-white:hover  { color: var(--color-ink) !important; }
+    #navbar.scrolled #hamburger                { color: var(--color-ink) !important; border-color: rgba(var(--color-ink-rgb),0.16) !important; }
     #navbar.scrolled #mobile-menu              { background: #fff; }
-    #navbar.scrolled #mobile-menu a.mobile-nav-link       { color: var(--slate) !important; }
-    #navbar.scrolled #mobile-menu a.mobile-nav-link:hover { color: var(--ink-body) !important; background: rgba(26,26,46,0.04) !important; }
-    #navbar.scrolled #mobile-menu { border-top-color: rgba(26,26,46,0.08) !important; }
+    #navbar.scrolled #mobile-menu a.mobile-nav-link       { color: var(--color-gray-600) !important; }
+    #navbar.scrolled #mobile-menu a.mobile-nav-link:hover { color: var(--color-ink) !important; background: rgba(var(--color-ink-rgb),0.04) !important; }
+    #navbar.scrolled #mobile-menu { border-top-color: rgba(var(--color-ink-rgb),0.08) !important; }
 
     /* ── Nav animated underline ── */
     .nav-link { position: relative; }
     .nav-link::after {
       content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--glass-primary);
+      width: 0; height: 2px; background: var(--color-primary);
       transition: width 0.25s cubic-bezier(0.4,0,0.2,1);
     }
     .nav-link:hover::after { width: 100%; }
@@ -136,7 +158,7 @@
     .nav-dropdown-menu {
       position: absolute; top: 100%; left: 50%;
       margin-top: 14px; min-width: 252px; padding: 8px;
-      background: rgba(26,26,46,0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      background: rgba(var(--color-ink-rgb),0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
       box-shadow: 0 18px 48px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.18);
       opacity: 0; visibility: hidden; pointer-events: none;
@@ -158,11 +180,11 @@
     }
     .nav-dropdown-menu a:hover { color: #fff; background: rgba(255,255,255,0.07); }
     #navbar.scrolled .nav-dropdown-menu {
-      background: rgba(255,255,255,0.98); border-color: rgba(26,26,46,0.08);
-      box-shadow: 0 18px 48px rgba(26,26,46,0.14), 0 2px 8px rgba(26,26,46,0.06);
+      background: rgba(255,255,255,0.98); border-color: rgba(var(--color-ink-rgb),0.08);
+      box-shadow: 0 18px 48px rgba(var(--color-ink-rgb),0.14), 0 2px 8px rgba(var(--color-ink-rgb),0.06);
     }
-    #navbar.scrolled .nav-dropdown-menu a { color: var(--slate); }
-    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--ink-body); background: rgba(26,26,46,0.04); }
+    #navbar.scrolled .nav-dropdown-menu a { color: var(--color-gray-600); }
+    #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
 
     /* ── Services dropdown (mobile) ── */
     .mobile-services-toggle {
@@ -186,14 +208,14 @@
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-submenu a:hover { color: #fff; background: rgba(255,255,255,0.06); }
-    #navbar.scrolled .mobile-services-toggle { color: var(--slate); }
-    #navbar.scrolled .mobile-services-toggle:hover { color: var(--ink-body); background: rgba(26,26,46,0.04); }
-    #navbar.scrolled .mobile-services-submenu { border-left-color: rgba(26,26,46,0.10); }
-    #navbar.scrolled .mobile-services-submenu a { color: var(--slate); }
-    #navbar.scrolled .mobile-services-submenu a:hover { color: var(--ink-body); background: rgba(26,26,46,0.04); }
+    #navbar.scrolled .mobile-services-toggle { color: var(--color-gray-600); }
+    #navbar.scrolled .mobile-services-toggle:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
+    #navbar.scrolled .mobile-services-submenu { border-left-color: rgba(var(--color-ink-rgb),0.10); }
+    #navbar.scrolled .mobile-services-submenu a { color: var(--color-gray-600); }
+    #navbar.scrolled .mobile-services-submenu a:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
 
     /* ── Hero — real photo background ── */
-    .hero-bg { background: #1A1A2E; }
+    .hero-bg { background: var(--color-ink); }
     .hero-vignette {
       background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(0,0,0,0.50) 100%);
       pointer-events: none;
@@ -201,39 +223,39 @@
 
     /* ── Buttons ── */
     .btn-primary {
-      background: var(--ember); color: #fff;
+      background: var(--color-primary); color: #fff;
       font-weight: 700; border-radius: 8px; padding: 14px 28px; font-size: 15px;
       letter-spacing: 0.01em;
-      box-shadow: 0 4px 18px rgba(230,57,70,0.30);
+      box-shadow: 0 4px 18px rgba(var(--color-primary-rgb),0.30);
       transition: transform 0.18s cubic-bezier(0.4,0,0.2,1),
                   box-shadow 0.18s cubic-bezier(0.4,0,0.2,1),
                   background 0.18s cubic-bezier(0.4,0,0.2,1);
       display: inline-flex; align-items: center; gap: 8px;
     }
-    .btn-primary:hover  { background: var(--ember-hover); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(230,57,70,0.38); }
-    .btn-primary:active { transform: translateY(0); box-shadow: 0 2px 10px rgba(230,57,70,0.22); }
-    .btn-primary:focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+    .btn-primary:hover  { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(var(--color-primary-rgb),0.38); }
+    .btn-primary:active { transform: translateY(0); box-shadow: 0 2px 10px rgba(var(--color-primary-rgb),0.22); }
+    .btn-primary:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 
     .trust-badge {
-      background: rgba(230,57,70,0.12); border: 1px solid rgba(230,57,70,0.28);
+      background: rgba(var(--color-primary-rgb),0.12); border: 1px solid rgba(var(--color-primary-rgb),0.28);
       border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 500;
-      color: var(--glass-pale); display: inline-flex; align-items: center; gap: 6px;
+      color: var(--color-primary-pale); display: inline-flex; align-items: center; gap: 6px;
     }
 
     /* ── Phone pulse ── */
     .phone-pulse { animation: pulse-ring 2.5s cubic-bezier(0.4,0,0.6,1) infinite; }
     @keyframes pulse-ring {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(230,57,70,0.4); }
-      50%       { box-shadow: 0 0 0 10px rgba(230,57,70,0); }
+      0%, 100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb),0.4); }
+      50%       { box-shadow: 0 0 0 10px rgba(var(--color-primary-rgb),0); }
     }
 
     /* ── Success check badge ── */
     .check-badge {
       width: 88px; height: 88px; border-radius: 50%;
-      background: linear-gradient(135deg, rgba(230,57,70,0.22) 0%, rgba(230,57,70,0.10) 100%);
-      border: 1.5px solid rgba(230,57,70,0.45);
+      background: linear-gradient(135deg, rgba(var(--color-primary-rgb),0.22) 0%, rgba(var(--color-primary-rgb),0.10) 100%);
+      border: 1.5px solid rgba(var(--color-primary-rgb),0.45);
       display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 0 36px rgba(230,57,70,0.28), inset 0 1px 0 rgba(255,255,255,0.10);
+      box-shadow: 0 0 36px rgba(var(--color-primary-rgb),0.28), inset 0 1px 0 rgba(255,255,255,0.10);
     }
 
     .fade-up {
@@ -246,9 +268,9 @@
     #mobile-menu.open { display: block; }
 
     ::-webkit-scrollbar { width: 6px; }
-    ::-webkit-scrollbar-track { background: #F3F3F6; }
-    ::-webkit-scrollbar-thumb { background: #D0D0DA; border-radius: 3px; }
-    ::-webkit-scrollbar-thumb:hover { background: var(--glass-primary); }
+    ::-webkit-scrollbar-track { background: var(--color-surface-100); }
+    ::-webkit-scrollbar-thumb { background: var(--color-surface-200); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
   </style>
 </head>
 <body class="font-body leading-body">
@@ -267,7 +289,7 @@
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-7">
         <div class="nav-dropdown">
-          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-slate-light hover:text-white transition-colors duration-150" aria-haspopup="true">
+          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
             Services
             <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
@@ -281,7 +303,7 @@
           </div>
         </div>
         <div class="nav-dropdown">
-          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-slate-light hover:text-white transition-colors duration-150" aria-haspopup="true">
+          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
             Areas We Serve
             <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
           </a>
@@ -294,10 +316,10 @@
             <a href="/areas/harlingen.html" role="menuitem">[City 6]</a>
           </div>
         </div>
-        <a href="/#insurance"   class="nav-link text-sm font-medium text-slate-light hover:text-white transition-colors duration-150">Insurance</a>
-        <a href="/about.html" class="nav-link text-sm font-medium text-slate-light hover:text-white transition-colors duration-150">About</a>
-        <a href="/#reviews"     class="nav-link text-sm font-medium text-slate-light hover:text-white transition-colors duration-150">Reviews</a>
-        <a href="/#contact"     class="nav-link text-sm font-medium text-slate-light hover:text-white transition-colors duration-150">Contact</a>
+        <a href="/#insurance"   class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Insurance</a>
+        <a href="/about.html" class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">About</a>
+        <a href="/#reviews"     class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Reviews</a>
+        <a href="/#contact"     class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Contact</a>
         <a href="tel:+15550000000" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           (555) 000-0000
@@ -370,7 +392,7 @@
       <!-- Dark overlay -->
       <div style="position: absolute; inset: 0; z-index: 1; background:
         linear-gradient(180deg, rgba(15,15,26,0.80) 0%, rgba(15,15,26,0.55) 45%, rgba(15,15,26,0.82) 100%),
-        radial-gradient(ellipse 70% 80% at 50% 40%, rgba(26,26,46,0.30) 0%, transparent 65%);
+        radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-ink-rgb),0.30) 0%, transparent 65%);
       "></div>
 
       <!-- Edge vignette -->
@@ -380,7 +402,7 @@
 
         <!-- Success check badge -->
         <div class="check-badge mb-7">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--ember)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
 
         <!-- Eyebrow -->
@@ -409,7 +431,7 @@
       </div>
 
       <!-- Ember accent bridge -->
-      <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--ember) 18%, var(--ember) 82%, transparent 100%); opacity: 0.90;"></div>
+      <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.90;"></div>
     </section>
   </main>
 
@@ -426,15 +448,15 @@
           <a href="/" class="flex items-center mb-2" aria-label="Your Business Name home">
             <span class="footer-wordmark">Your Business Name</span>
           </a>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ember); margin-bottom: 14px; opacity: 0.85;">Trusted Local Home Services</p>
-          <p class="text-slate-light text-sm mb-5" style="line-height: 1.7;">Professional home services you can count on — serving [City] and the surrounding [Region].</p>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; opacity: 0.85;">Trusted Local Home Services</p>
+          <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Professional home services you can count on — serving [City] and the surrounding [Region].</p>
           <div class="space-y-2">
             <a href="tel:+15550000000" class="flex items-center gap-2 text-white text-sm font-medium hover:opacity-80 transition-opacity duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--glass-light)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               (555) 000-0000
             </a>
-            <a href="mailto:hello@yourbusiness.com" class="flex items-center gap-2 text-slate-light text-sm hover:text-white transition-colors duration-150">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--glass-light)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:hello@yourbusiness.com" class="flex items-center gap-2 text-muted-light text-sm hover:text-white transition-colors duration-150">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               hello@yourbusiness.com
             </a>
           </div>
@@ -444,12 +466,12 @@
         <div>
           <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Services</h2>
           <ul class="space-y-2.5">
-            <li><a href="/services/carports.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Two</a></li>
-            <li><a href="/services/storage-sheds.html"       class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service One</a></li>
-            <li><a href="/services/custom-buildings.html"        class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Three</a></li>
-            <li><a href="/services/cabins-portable-offices.html"    class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Four</a></li>
-            <li><a href="/services/financing.html"           class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Five</a></li>
-            <li><a href="/services/inventory.html"  class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Six</a></li>
+            <li><a href="/services/carports.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Two</a></li>
+            <li><a href="/services/storage-sheds.html"       class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service One</a></li>
+            <li><a href="/services/custom-buildings.html"        class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Three</a></li>
+            <li><a href="/services/cabins-portable-offices.html"    class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Four</a></li>
+            <li><a href="/services/financing.html"           class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Five</a></li>
+            <li><a href="/services/inventory.html"  class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Six</a></li>
           </ul>
         </div>
 
@@ -457,12 +479,12 @@
         <div>
           <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/#why-us"       class="text-slate-light text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <li><a href="/#reviews"      class="text-slate-light text-sm hover:text-white transition-colors duration-150">Reviews</a></li>
-            <li><a href="/#insurance"    class="text-slate-light text-sm hover:text-white transition-colors duration-150">Insurance Partners</a></li>
-            <li><a href="/#service-area" class="text-slate-light text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
-            <li><a href="/#contact"      class="text-slate-light text-sm hover:text-white transition-colors duration-150">Contact</a></li>
-            <li><a href="#"              class="text-slate-light text-sm hover:text-white transition-colors duration-150">Privacy Policy</a></li>
+            <li><a href="/#why-us"       class="text-muted-light text-sm hover:text-white transition-colors duration-150">About Us</a></li>
+            <li><a href="/#reviews"      class="text-muted-light text-sm hover:text-white transition-colors duration-150">Reviews</a></li>
+            <li><a href="/#insurance"    class="text-muted-light text-sm hover:text-white transition-colors duration-150">Insurance Partners</a></li>
+            <li><a href="/#service-area" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
+            <li><a href="/#contact"      class="text-muted-light text-sm hover:text-white transition-colors duration-150">Contact</a></li>
+            <li><a href="#"              class="text-muted-light text-sm hover:text-white transition-colors duration-150">Privacy Policy</a></li>
           </ul>
         </div>
 
@@ -470,12 +492,12 @@
         <div>
           <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
-            <li><a href="/areas/alamo.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City]</a></li>
-            <li><a href="/areas/mcallen.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City 2]</a></li>
-            <li><a href="/areas/edinburg.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City 3]</a></li>
-            <li><a href="/areas/mission.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City 4]</a></li>
-            <li><a href="/areas/pharr.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City 5]</a></li>
-            <li><a href="/areas/harlingen.html" class="text-slate-light text-sm hover:text-white transition-colors duration-150">[City 6]</a></li>
+            <li><a href="/areas/alamo.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City]</a></li>
+            <li><a href="/areas/mcallen.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 2]</a></li>
+            <li><a href="/areas/edinburg.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 3]</a></li>
+            <li><a href="/areas/mission.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 4]</a></li>
+            <li><a href="/areas/pharr.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 5]</a></li>
+            <li><a href="/areas/harlingen.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 6]</a></li>
           </ul>
         </div>
 
@@ -484,13 +506,13 @@
       <div class="divider mb-6"></div>
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p class="text-slate-light text-xs text-center sm:text-left">
+        <p class="text-muted-light text-xs text-center sm:text-left">
           © 2026 Your Business Name. All rights reserved. Serving [City] &amp; the [Region], TX.
         </p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-xs text-slate-light hover:text-white transition-colors duration-150">Privacy Policy</a>
+          <a href="#" class="text-xs text-muted-light hover:text-white transition-colors duration-150">Privacy Policy</a>
           <span style="color: rgba(255,255,255,0.20);">·</span>
-          <a href="#" class="text-xs text-slate-light hover:text-white transition-colors duration-150">Terms</a>
+          <a href="#" class="text-xs text-muted-light hover:text-white transition-colors duration-150">Terms</a>
         </div>
       </div>
     </div>
