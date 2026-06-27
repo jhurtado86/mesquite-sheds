@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Services in [City 2], TX | Your Business Name</title>
-  <meta name="description" content="Professional home services in [City 2], TX — same-day appointments, free estimates, and clear, upfront pricing. Call Your Business Name at (555) 000-0000." />
-  <meta name="keywords" content="home services [City 2] TX, home services [City 2], local home services [City 2], mobile home services [City 2], professional home services [City 2], home services near me [City 2], Your Business Name [City 2]" />
+  <title>Storage Sheds in McAllen, TX | Mesquite Sheds &amp; More</title>
+  <meta name="description" content="Storage sheds, carports & custom buildings in McAllen, TX — free delivery & set-up, no credit check, rent-to-own. Call or text (956) 586-6093." />
+  <meta name="keywords" content="storage sheds McAllen TX, sheds for sale McAllen, carports McAllen, portable buildings McAllen, rent to own sheds McAllen, no credit check sheds McAllen, custom buildings Rio Grande Valley, Mesquite Sheds and More" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-  <link rel="canonical" href="https://yourbusiness.com/areas/mcallen.html" />
+  <link rel="canonical" href="https://www.mesquitesheds.com/areas/mcallen.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Home Services in [City 2], TX | Your Business Name" />
-  <meta property="og:description" content="Professional home services in [City 2], TX. Same-day appointments, free estimates, clear upfront pricing, and mobile service to your door. Call (555) 000-0000." />
-  <meta property="og:url" content="https://yourbusiness.com/areas/mcallen.html" />
+  <meta property="og:title" content="Storage Sheds in McAllen, TX | Mesquite Sheds &amp; More" />
+  <meta property="og:description" content="Storage sheds, carports & custom buildings in McAllen, TX — free delivery & set-up, no credit check, rent-to-own. Call or text (956) 586-6093." />
+  <meta property="og:url" content="https://www.mesquitesheds.com/areas/mcallen.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://yourbusiness.com/brand_assets/og-image.jpg" /><!-- PLACEHOLDER: create 1200×630 social share image -->
+  <meta property="og:image" content="https://www.mesquitesheds.com/brand_assets/og-image.jpg" /><!-- PLACEHOLDER: brand_assets/og-image.jpg does not exist yet — create 1200×630 social share image before launch -->
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Your Business Name" />
+  <meta property="og:site_name" content="Mesquite Sheds &amp; More" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Home Services in [City 2], TX | Your Business Name" />
-  <meta name="twitter:description" content="Professional home services in [City 2], TX. Same-day appointments, free estimates, and clear, upfront pricing. Call (555) 000-0000." />
-  <meta name="twitter:image" content="https://yourbusiness.com/brand_assets/og-image.jpg" /><!-- PLACEHOLDER: same 1200×630 image -->
+  <meta name="twitter:title" content="Storage Sheds in McAllen, TX | Mesquite Sheds &amp; More" />
+  <meta name="twitter:description" content="Storage sheds, carports & custom buildings in McAllen, TX — free delivery & set-up, no credit check, rent-to-own. Call or text (956) 586-6093." />
+  <meta name="twitter:image" content="https://www.mesquitesheds.com/brand_assets/og-image.jpg" /><!-- PLACEHOLDER: same 1200×630 image -->
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,10 +59,8 @@
   </script>
 
   <style>
-    /* PROVISIONAL COLORS — replace when client brand colors confirmed */
     :root {
-      /* MESQUITE BARN-RED PALETTE (Move 2). */
-      /* primary — barn red #A8342A, ramp derived in-family */
+      /* MESQUITE BARN-RED PALETTE. */
       --color-primary:        #A8342A;
       --color-primary-rgb:    168,52,42;
       --color-primary-dark:   #882A20;
@@ -74,7 +72,7 @@
       --color-primary-tint-1: #D58D84;
       --color-primary-tint-2: #E6B6AE;
       --color-primary-tint-3: #DFAAA1;
-      /* ink — espresso charcoal #2B2420, warm dark ramp */
+      /* ink — espresso charcoal #2B2420 */
       --color-ink:            #2B2420;
       --color-ink-rgb:        43,36,32;
       --color-ink-900-rgb:    30,25,22;
@@ -95,7 +93,7 @@
       --color-surface-100:    #F5EEE0;
       /* accent — warm gold/tan */
       --color-accent:         #C8923A;
-      /* page background (cream) + primary body copy (brown-gray) — new in Move 2 */
+      /* page background (cream) + primary body copy (brown-gray) */
       --color-bg:             #FAF5EC;
       --color-body:           #3A332E;
     }
@@ -105,16 +103,54 @@
     body { font-family: 'Nunito', sans-serif; background: var(--color-bg); color: var(--color-body); }
     h1,h2,h3,h4 { font-family: 'Barlow', sans-serif; }
 
-    /* ── Section backgrounds ── */
     .section-dark { background: var(--color-bg); }
     .section-mid  {
       background:
         radial-gradient(ellipse 100% 60% at 50% 0%, rgba(var(--color-ink-rgb),0.05) 0%, transparent 55%),
-        var(--color-surface-150);
+        var(--color-surface-100);
     }
     .dark-section { background: var(--color-ink); }
 
-    /* ── Dark-section text overrides ── */
+    /* ---- Atmospheric depth for light sections (grain + corner wash) ---- */
+    .atmo { position: relative; overflow: hidden; }
+    .atmo > * { position: relative; z-index: 1; }
+    .atmo::before {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      opacity: 0.05; background-size: 160px 160px;
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .atmo::after {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: var(--wash, transparent);
+    }
+    .wash-navy-tr  { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
+    .wash-navy-br  { --wash: radial-gradient(ellipse 55% 48% at 100% 100%, rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
+    .wash-navy-bl  { --wash: radial-gradient(ellipse 55% 48% at 0% 100%,   rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
+    .wash-ember-tl { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-primary-rgb),0.05) 0%, transparent 60%); }
+    .wash-ember-tr { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-primary-rgb),0.05) 0%, transparent 60%); }
+
+    /* ---- Service-area section: deep dark treatment (page rhythm) ---- */
+    #service-area.dark-section {
+      background:
+        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-ink-rgb),0.16) 0%, transparent 55%),
+        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-primary-rgb),0.08) 0%, transparent 52%),
+        var(--color-ink-700);
+    }
+    #service-area .area-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-ink-900-rgb),0.45);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+    #service-area .area-card a.city-link { color: #fff !important; }
+    #service-area .area-card p { color: var(--color-gray-350) !important; }
+
+    /* ---- Gallery section: deep dark treatment ---- */
+    #gallery.dark-section {
+      background:
+        radial-gradient(ellipse 80% 60% at 12% 6%, rgba(var(--color-primary-rgb),0.06) 0%, transparent 50%),
+        var(--color-ink-700);
+    }
+
     .dark-section .text-white        { color: #fff !important; }
     .dark-section .text-muted-light  { color: var(--color-gray-400) !important; }
     .dark-section .btn-outline       { color: #fff; border-color: rgba(255,255,255,0.28); }
@@ -122,46 +158,85 @@
     .dark-section .divider           { background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent); }
     .dark-section .section-title-accent { background: linear-gradient(90deg, transparent 0%, var(--color-primary) 25%, var(--color-primary) 75%, transparent 100%); }
 
-    /* ── Light-section text overrides ── */
     .section-dark .text-white,
     .section-mid  .text-white       { color: var(--color-ink); }
     .section-dark .text-muted-light,
     .section-mid  .text-muted-light { color: var(--color-gray-700); }
     .hero-bg .text-muted-light      { color: var(--color-gray-450); }
 
-    /* ── Divider ── */
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent 0%, rgba(var(--color-ink-rgb),0.12) 30%, rgba(var(--color-ink-rgb),0.12) 70%, transparent 100%);
     }
+    /* Strengthened section divider — engraved hairline w/ barn-red center + light highlight (per anti-flat-rule guardrail) */
+    .divider-strong {
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(var(--color-ink-rgb),0.18) 22%,
+        rgba(var(--color-primary-rgb),0.34) 50%,
+        rgba(var(--color-ink-rgb),0.18) 78%,
+        transparent 100%);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.65);
+    }
 
-    /* ── Dark CTA ramp ── */
     .dark-cta-ramp {
       position: absolute; top: 0; left: 0; right: 0;
       height: 90px; pointer-events: none; z-index: 3;
       background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 100%);
     }
 
-    /* ── Nav wordmark ── */
     .nav-wordmark {
       font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 24px;
+      font-weight: 800; font-size: 22px;
       letter-spacing: -0.02em; color: #fff; line-height: 1;
       transition: color 0.25s cubic-bezier(0.4,0,0.2,1);
     }
     .nav-wordmark .plus { color: var(--color-primary); }
     #navbar.scrolled .nav-wordmark { color: var(--color-ink); }
+    #navbar.scrolled .nav-wordmark .plus { color: var(--color-primary); }
 
     .footer-wordmark {
       font-family: 'Barlow', sans-serif;
-      font-weight: 800; font-size: 28px;
+      font-weight: 800; font-size: 26px;
       letter-spacing: -0.02em; color: #fff; line-height: 1;
     }
     .footer-wordmark .plus { color: var(--color-primary); }
 
-    /* ── Nav ── */
+    /* ---- Topbar wrapper (promo strip + nav, fixed together) ---- */
+    #topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+
+    /* ---- Promo strip (SWAPPABLE / time-limited) ---- */
+    #promo-strip { background: var(--color-primary-dark); color: #fff; position: relative; }
+    body.promo-dismissed #promo-strip { display: none; }
+    .promo-inner {
+      max-width: 72rem; margin: 0 auto; padding: 8px 44px;
+      display: flex; align-items: center; justify-content: center; gap: 10px; text-align: center;
+    }
+    .promo-text { font-size: 12.5px; font-weight: 500; line-height: 1.4; color: rgba(255,255,255,0.92); }
+    .promo-text strong { color: #fff; font-weight: 700; }
+    .promo-pill {
+      display: inline-block; background: var(--color-accent); color: var(--color-ink);
+      font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 10.5px;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 2px 9px; border-radius: 100px; margin-right: 8px; vertical-align: middle;
+    }
+    #promo-close {
+      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+      width: 26px; height: 26px; display: flex; align-items: center; justify-content: center;
+      border-radius: 7px; color: rgba(255,255,255,0.72); cursor: pointer;
+      background: transparent; border: none;
+      transition: background 0.15s cubic-bezier(0.4,0,0.2,1), color 0.15s cubic-bezier(0.4,0,0.2,1);
+    }
+    #promo-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
+    #promo-close:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    @media (max-width: 640px) {
+      .promo-inner { padding: 7px 40px; }
+      .promo-text { font-size: 11.5px; }
+    }
+
     #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      position: relative;
       background: transparent;
       border-bottom: 1px solid transparent;
       transition: background 0.40s cubic-bezier(0.4,0,0.2,1),
@@ -177,7 +252,7 @@
     #mobile-menu                       { border-top-color: rgba(255,255,255,0.08) !important; }
 
     #navbar.scrolled {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.82);
       backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
       border-bottom-color: rgba(var(--color-ink-rgb),0.07);
       box-shadow: 0 1px 24px rgba(0,0,0,0.06);
@@ -190,7 +265,6 @@
     #navbar.scrolled #mobile-menu a.mobile-nav-link:hover { color: var(--color-ink) !important; background: rgba(var(--color-ink-rgb),0.04) !important; }
     #navbar.scrolled #mobile-menu { border-top-color: rgba(var(--color-ink-rgb),0.08) !important; }
 
-    /* ── Nav animated underline ── */
     .nav-link { position: relative; }
     .nav-link::after {
       content: ''; position: absolute; bottom: -2px; left: 0;
@@ -199,7 +273,7 @@
     }
     .nav-link:hover::after { width: 100%; }
 
-    /* ── Services dropdown (desktop) ── */
+    /* ── Dropdowns (desktop) ── */
     .nav-dropdown { position: relative; }
     .nav-dropdown-trigger { display: inline-flex; align-items: center; gap: 5px; }
     .nav-dropdown-trigger .nav-chev { transition: transform 0.25s cubic-bezier(0.4,0,0.2,1); }
@@ -207,7 +281,7 @@
     .nav-dropdown:focus-within .nav-chev { transform: rotate(180deg); }
     .nav-dropdown-menu {
       position: absolute; top: 100%; left: 50%;
-      margin-top: 14px; min-width: 252px; padding: 8px;
+      margin-top: 14px; min-width: 248px; padding: 8px;
       background: rgba(var(--color-ink-rgb),0.97); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
       box-shadow: 0 18px 48px rgba(0,0,0,0.34), 0 2px 8px rgba(0,0,0,0.18);
@@ -236,9 +310,8 @@
     }
     #navbar.scrolled .nav-dropdown-menu a { color: var(--color-gray-600); }
     #navbar.scrolled .nav-dropdown-menu a:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
-    #navbar.scrolled .nav-dropdown-menu a[aria-current="page"] { color: var(--color-ink); background: rgba(var(--color-primary-rgb),0.12); }
 
-    /* ── Services dropdown (mobile) ── */
+    /* ── Dropdowns (mobile) ── */
     .mobile-services-toggle {
       display: flex; align-items: center; justify-content: space-between; width: 100%;
       background: none; border: none; cursor: pointer; font: inherit; text-align: left;
@@ -260,29 +333,21 @@
       transition: color 0.15s cubic-bezier(0.4,0,0.2,1), background 0.15s cubic-bezier(0.4,0,0.2,1);
     }
     .mobile-services-submenu a:hover { color: #fff; background: rgba(255,255,255,0.06); }
-    .mobile-services-submenu a[aria-current="page"] { color: #fff; font-weight: 700; }
     #navbar.scrolled .mobile-services-toggle { color: var(--color-gray-600); }
     #navbar.scrolled .mobile-services-toggle:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
     #navbar.scrolled .mobile-services-submenu { border-left-color: rgba(var(--color-ink-rgb),0.10); }
     #navbar.scrolled .mobile-services-submenu a { color: var(--color-gray-600); }
     #navbar.scrolled .mobile-services-submenu a:hover { color: var(--color-ink); background: rgba(var(--color-ink-rgb),0.04); }
 
-    /* ── Hero — real photo background ── */
     .hero-bg { background: var(--color-ink); }
     .hero-vignette {
       background: radial-gradient(ellipse 120% 100% at 50% 50%, transparent 35%, rgba(0,0,0,0.50) 100%);
       pointer-events: none;
     }
-    .hero-bg .trust-badge {
-      background: rgba(var(--color-primary-rgb),0.12);
-      border-color: rgba(var(--color-primary-rgb),0.28);
-      color: var(--color-primary-pale);
-    }
     .hero-bg .btn-outline { color: rgba(255,255,255,0.88); border-color: rgba(255,255,255,0.20); }
     .hero-bg .btn-outline:hover { border-color: rgba(var(--color-primary-rgb),0.50); background: rgba(var(--color-ink-rgb),0.14); transform: translateY(-2px); }
-    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.15rem !important; } }
+    @media (max-width: 767px) { .hero-text-block h1 { font-size: 2.3rem !important; } }
 
-    /* ── Buttons ── */
     .btn-primary {
       background: var(--color-primary); color: #fff;
       font-weight: 700; border-radius: 8px; padding: 14px 28px; font-size: 15px;
@@ -310,7 +375,6 @@
     .btn-outline:active { transform: translateY(0); }
     .btn-outline:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 
-    /* ── Cards ── */
     .service-card {
       background: #fff; border: 1px solid rgba(var(--color-ink-rgb),0.07); border-radius: 16px; padding: 30px;
       box-shadow: 0 1px 2px rgba(var(--color-ink-rgb),0.05), 0 6px 18px rgba(var(--color-ink-rgb),0.10), 0 16px 40px rgba(var(--color-ink-rgb),0.09), 0 0 0 1px rgba(var(--color-ink-rgb),0.05);
@@ -325,23 +389,6 @@
     }
     .service-card:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; }
 
-    .feature-card {
-      background: #fff; border: 1px solid rgba(var(--color-ink-rgb),0.07); border-radius: 16px; padding: 28px 24px;
-      box-shadow: 0 1px 2px rgba(var(--color-ink-rgb),0.05), 0 6px 18px rgba(var(--color-ink-rgb),0.09), 0 16px 38px rgba(var(--color-ink-rgb),0.08);
-      transition: transform 0.24s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.24s cubic-bezier(0.4,0,0.2,1);
-    }
-    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.06), 0 16px 36px rgba(var(--color-ink-rgb),0.11); }
-
-    /* ── Insurance pill ── */
-    .insurer-pill {
-      background: rgba(var(--color-ink-rgb),0.07); border: 1px solid rgba(var(--color-ink-rgb),0.16);
-      border-radius: 100px; padding: 8px 20px; font-size: 14px; font-weight: 600;
-      color: var(--color-primary); display: inline-flex; align-items: center;
-      transition: background 0.18s, border-color 0.18s, transform 0.18s cubic-bezier(0.34,1.56,0.64,1);
-    }
-    .insurer-pill:hover { background: rgba(var(--color-ink-rgb),0.14); border-color: rgba(var(--color-ink-rgb),0.30); transform: translateY(-1px); }
-
-    /* ── Badges & accents ── */
     .trust-badge {
       background: rgba(var(--color-ink-rgb),0.07); border: 1px solid rgba(var(--color-ink-rgb),0.15);
       border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 500;
@@ -360,13 +407,6 @@
       margin-bottom: 16px; flex-shrink: 0;
       box-shadow: 0 2px 8px rgba(var(--color-ink-rgb),0.09), inset 0 1px 0 rgba(255,255,255,0.60);
     }
-    .trust-icon {
-      width: 44px; height: 44px;
-      background: linear-gradient(135deg, rgba(var(--color-ink-rgb),0.10) 0%, rgba(var(--color-ink-rgb),0.06) 100%);
-      border: 1px solid rgba(var(--color-ink-rgb),0.14); border-radius: 12px;
-      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(var(--color-ink-rgb),0.09), inset 0 1px 0 rgba(255,255,255,0.60);
-    }
     .link-arrow {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 14px; font-weight: 600; color: var(--color-primary);
@@ -375,7 +415,6 @@
     .link-arrow:hover { color: var(--color-primary-dark); gap: 10px; }
     .link-arrow:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; border-radius: 4px; }
 
-    /* ── Area card ── */
     .area-card {
       background: linear-gradient(135deg, rgba(var(--color-ink-rgb),0.04) 0%, rgba(var(--color-ink-rgb),0.015) 100%), #fff;
       border: 1px solid rgba(var(--color-ink-rgb),0.12); border-radius: 18px; padding: 36px 40px;
@@ -387,28 +426,69 @@
       box-shadow: 0 0 6px rgba(var(--color-ink-rgb),0.40); flex-shrink: 0;
     }
 
-    /* ── Stars ── */
-    .stars { color: var(--color-accent); letter-spacing: 1px; }
+    /* ---- Content photo (text-beside-photo sections) ---- */
+    .content-photo {
+      position: relative; overflow: hidden; border-radius: 20px; background: var(--color-ink);
+      box-shadow: 0 1px 3px rgba(var(--color-ink-rgb),0.06),
+                  0 12px 30px rgba(var(--color-ink-rgb),0.12),
+                  0 28px 60px rgba(var(--color-ink-rgb),0.10),
+                  0 0 0 1px rgba(var(--color-ink-rgb),0.05);
+    }
+    .content-photo img {
+      display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+    }
+    .content-photo:hover img { transform: scale(1.035); }
+    .content-photo::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: linear-gradient(180deg, rgba(43,36,32,0) 55%, rgba(43,36,32,0.30) 100%);
+    }
+    .photo-badge {
+      position: absolute; left: 16px; bottom: 16px; z-index: 2;
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: 'Barlow', sans-serif; font-weight: 700; font-size: 12px;
+      letter-spacing: 0.04em; padding: 7px 13px; border-radius: 100px;
+      background: rgba(var(--color-ink-900-rgb),0.62); color: #fff; backdrop-filter: blur(6px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.30);
+    }
+    .photo-badge svg { color: var(--color-primary-light); }
 
-    /* ── Mobile menu ── */
+    /* ---- Inline feature checks (within text columns) ---- */
+    .check-row { display: flex; align-items: center; gap: 11px; }
+    .check-ic {
+      width: 26px; height: 26px; border-radius: 8px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(var(--color-primary-rgb),0.10); border: 1px solid rgba(var(--color-primary-rgb),0.22);
+    }
+    .check-ic svg { color: var(--color-primary); }
+
+    /* ---- Gallery tiles ---- */
+    .work-tile {
+      position: relative; overflow: hidden; border-radius: 16px; background: var(--color-ink);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.30), 0 10px 26px rgba(0,0,0,0.34), 0 0 0 1px rgba(255,255,255,0.05);
+    }
+    .work-tile img {
+      display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
+      transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+    }
+    .work-tile:hover img { transform: scale(1.05); }
+    .work-grad {
+      position: absolute; inset: 0; z-index: 1; pointer-events: none;
+      background: linear-gradient(180deg, rgba(20,16,14,0) 45%, rgba(20,16,14,0.18) 66%, rgba(20,16,14,0.80) 100%);
+    }
+    .work-overlay-cap { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 16px 16px 14px; color: #fff; pointer-events: none; }
+    .work-overlay-cap .t { font-family: 'Barlow', sans-serif; font-weight: 800; font-size: 16px; letter-spacing: -0.02em; line-height: 1.1; }
+    .work-overlay-cap .s { font-size: 12.5px; color: rgba(255,255,255,0.82); margin-top: 2px; }
+
     #mobile-menu { display: none; }
     #mobile-menu.open { display: block; }
 
-    /* ── Scroll animations ── */
     .fade-up {
       opacity: 0; transform: translateY(24px);
       transition: opacity 0.55s cubic-bezier(0.4,0,0.2,1), transform 0.55s cubic-bezier(0.4,0,0.2,1);
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── Phone pulse ── */
-    .phone-pulse { animation: pulse-ring 2.5s cubic-bezier(0.4,0,0.6,1) infinite; }
-    @keyframes pulse-ring {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(var(--color-primary-rgb),0.4); }
-      50%       { box-shadow: 0 0 0 10px rgba(var(--color-primary-rgb),0); }
-    }
-
-    /* ── Hero layout left-aligned on desktop ── */
     @media (min-width: 1024px) {
       .hero-outer {
         max-width: none !important; margin-left: 0 !important; margin-right: 0 !important;
@@ -417,123 +497,115 @@
       .hero-text-block { max-width: 600px !important; }
     }
 
-    /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--color-surface-100); }
     ::-webkit-scrollbar-thumb { background: var(--color-surface-200); border-radius: 3px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--color-primary); }
-
-    /* ── Breadcrumb ── */
-    .breadcrumb { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; }
-    .breadcrumb a { color: rgba(255,255,255,0.55); transition: color 0.18s; }
-    .breadcrumb a:hover { color: rgba(255,255,255,0.90); }
-    .breadcrumb .sep { color: rgba(255,255,255,0.30); }
-    .breadcrumb .current { color: rgba(255,255,255,0.80); }
-  
-    /* ---- Atmospheric depth for light sections (grain + corner wash) ---- */
-    .atmo { position: relative; overflow: hidden; }
-    .atmo > * { position: relative; z-index: 1; }
-    .atmo::before {
-      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      opacity: 0.05; background-size: 160px 160px;
-      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.85'%20numOctaves='2'%20stitchTiles='stitch'/%3E%3C/filter%3E%3Crect%20width='100%25'%20height='100%25'%20filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-    .atmo::after {
-      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-      background: var(--wash, transparent);
-    }
-    .wash-navy-tr  { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
-    .wash-navy-br  { --wash: radial-gradient(ellipse 55% 48% at 100% 100%, rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
-    .wash-navy-bl  { --wash: radial-gradient(ellipse 55% 48% at 0% 100%,   rgba(var(--color-ink-rgb),0.06) 0%, transparent 60%); }
-    .wash-ember-tl { --wash: radial-gradient(ellipse 55% 48% at 0% 0%,     rgba(var(--color-primary-rgb),0.05) 0%, transparent 60%); }
-    .wash-ember-tr { --wash: radial-gradient(ellipse 55% 48% at 100% 0%,   rgba(var(--color-primary-rgb),0.05) 0%, transparent 60%); }
-
-    /* ---- Insurance section: deep-navy treatment (page rhythm) ---- */
-    #insurance.dark-section {
-      background:
-        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-ink-rgb),0.20) 0%, transparent 55%),
-        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-primary-rgb),0.08) 0%, transparent 52%),
-        var(--color-ink);
-    }
-    #insurance .area-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-ink-900-rgb),0.45);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-    #insurance .area-card > .text-center span { color: var(--color-primary-tint-1) !important; }
-    #insurance .area-card p { color: var(--color-gray-350) !important; }
-    #insurance .insurer-pill {
-      background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.16); color: var(--color-surface-300);
-    }
-    #insurance .insurer-pill:hover {
-      background: rgba(255,255,255,0.12); border-color: rgba(var(--color-primary-rgb),0.45); transform: translateY(-1px);
-    }
-
-    /* ---- Why-Us section: deep-navy treatment (page rhythm, matches insurance) ---- */
-    #why-us.dark-section {
-      background:
-        radial-gradient(ellipse 90% 70% at 12% 0%,   rgba(var(--color-ink-rgb),0.20) 0%, transparent 55%),
-        radial-gradient(ellipse 85% 65% at 100% 100%, rgba(var(--color-primary-rgb),0.08) 0%, transparent 52%),
-        var(--color-ink);
-    }
-    #why-us .feature-card {
-      background: linear-gradient(135deg, rgba(255,255,255,0.055) 0%, rgba(255,255,255,0.02) 100%), rgba(var(--color-ink-900-rgb),0.45);
-      border: 1px solid rgba(255,255,255,0.10);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 20px 50px rgba(0,0,0,0.38), inset 0 1px 0 rgba(255,255,255,0.06);
-    }
-    #why-us .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 28px 62px rgba(0,0,0,0.46), inset 0 1px 0 rgba(255,255,255,0.08);
-    }
-    #why-us .icon-wrap {
-      background: rgba(var(--color-ink-rgb),0.22);
-      border: 1px solid rgba(var(--color-primary-rgb),0.30);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.07);
-    }
-    #why-us .icon-wrap svg { stroke: var(--color-primary-light); }
-    #insurance strong { color: var(--color-primary) !important; }
   </style>
 
-  <!-- Service Structured Data -->
+  <!-- Page-specific helper: interior dark bands use lifted charcoal (--color-ink-700),
+       slightly lighter than the deepest --color-ink reserved for hero + final CTA. -->
+  <style>
+    .section-ink700 {
+      background:
+        radial-gradient(ellipse 80% 60% at 12% 6%, rgba(var(--color-primary-rgb),0.06) 0%, transparent 50%),
+        var(--color-ink-700);
+    }
+  </style>
+
+  <!-- Service Structured Data (references parent LocalBusiness on the homepage) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Home Services in [City 2], TX",
-    "serviceType": "Professional Home Services",
-    "description": "Professional home services in [City 2], TX — covering all six core services, with same-day appointments, a satisfaction guarantee, free estimates, and mobile service across [City 2] and the [Region].",
-    "url": "https://yourbusiness.com/areas/mcallen.html",
+    "@id": "https://www.mesquitesheds.com/areas/mcallen.html#service",
+    "serviceType": "Storage Sheds, Carports, and Portable Buildings",
+    "name": "Storage Sheds in McAllen, TX",
+    "description": "Storage sheds, carports, cabins, and custom buildings delivered to McAllen, TX. Buy from on-site inventory at the Alamo lot or build your own, with free delivery and set-up to McAllen, no credit check, and rent-to-own. Built to Stor-Mor standards.",
+    "url": "https://www.mesquitesheds.com/areas/mcallen.html",
+    "image": "https://www.mesquitesheds.com/brand_assets/og-image.jpg",
     "provider": {
       "@type": "LocalBusiness",
-      "@id": "https://yourbusiness.com/#business",
-      "name": "Your Business Name",
-      "telephone": "+15550000000",
-      "email": "hello@yourbusiness.com"
+      "@id": "https://www.mesquitesheds.com/#business",
+      "name": "Mesquite Sheds & More",
+      "telephone": "+19565866093",
+      "url": "https://www.mesquitesheds.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "97 E Bus Hwy 83",
+        "addressLocality": "Alamo",
+        "addressRegion": "TX",
+        "postalCode": "78516",
+        "addressCountry": "US"
+      }
     },
     "areaServed": {
       "@type": "City",
-      "name": "[City 2]",
+      "name": "McAllen",
       "containedInPlace": { "@type": "State", "name": "Texas" }
-    },
-    "offers": {
-      "@type": "Offer",
-      "priceSpecification": {
-        "@type": "PriceSpecification",
-        "description": "Free estimates and clear, upfront pricing - call for a quote."
-      }
     }
   }
   </script>
 
-  <!-- BreadcrumbList Structured Data -->
+  <!-- Breadcrumb Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourbusiness.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://yourbusiness.com/#service-area" },
-      { "@type": "ListItem", "position": 3, "name": "[City 2]", "item": "https://yourbusiness.com/areas/mcallen.html" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mesquitesheds.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Areas We Serve", "item": "https://www.mesquitesheds.com/#service-area" },
+      { "@type": "ListItem", "position": 3, "name": "McAllen", "item": "https://www.mesquitesheds.com/areas/mcallen.html" }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Structured Data (mirrors the on-page FAQ section verbatim) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do you deliver storage sheds to McAllen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. McAllen sits well inside our 50-mile free-delivery range from the Alamo lot, so delivery and set-up to McAllen are free. We bring your building out, set it level, and make sure it is ready to use before we leave."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How fast can you deliver to McAllen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you buy from our on-site inventory in Alamo, we can often deliver to McAllen within a few days since it is just up Expressway 83 from the lot. A custom build is made at the Stor-Mor shop first, which usually takes a few weeks depending on the options you choose."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is your lot relative to McAllen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our lot is at 97 E Bus Hwy 83 in Alamo, a short drive east of McAllen along Business 83 and Expressway 83. Most McAllen customers reach us in well under half an hour, and delivery comes right back the same way."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can McAllen customers see the inventory in person?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. Come walk the Alamo lot and see storage sheds, carports, and cabins in person before you decide. You can also browse our live inventory online any time, then call or text (956) 586-6093 with questions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer no-credit-check financing for McAllen buyers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. McAllen customers get the same rent-to-own with no credit check and low monthly payments, or you can buy outright. Contracts are signed in person at the Alamo lot, and most people are approved fast."
+        }
+      }
     ]
   }
   </script>
@@ -541,122 +613,149 @@
 <body class="font-body leading-body">
 
   <!-- ============================================================
-       STICKY NAVIGATION
+       TOP BAR  (promo strip + sticky nav, fixed together)
   ============================================================ -->
-  <nav id="navbar" class="py-3">
-    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+  <header id="topbar">
 
-      <!-- LOGO PLACEHOLDER — replace <span> with <img> when client logo is ready -->
-      <a href="/" class="flex items-center group" aria-label="Your Business Name home">
-        <span class="nav-wordmark">Your Business Name</span>
-      </a>
-
-      <!-- Desktop Nav -->
-      <div class="hidden md:flex items-center gap-7">
-        <div class="nav-dropdown">
-          <a href="/#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
-            Services
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="nav-dropdown-menu" role="menu" aria-label="Services">
-            <a href="/services/storage-sheds.html" role="menuitem">Service One</a>
-            <a href="/services/carports.html" role="menuitem">Service Two</a>
-            <a href="/services/custom-buildings.html" role="menuitem">Service Three</a>
-            <a href="/services/financing.html" role="menuitem">Service Five</a>
-            <a href="/services/cabins-portable-offices.html" role="menuitem">Service Four</a>
-            <a href="/services/inventory.html" role="menuitem">Service Six</a>
-          </div>
-        </div>
-        <div class="nav-dropdown">
-          <a href="/#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
-            Areas We Serve
-            <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-          </a>
-          <div class="nav-dropdown-menu" role="menu" aria-label="Areas We Serve">
-            <a href="/areas/alamo.html" role="menuitem" aria-current="page">[City]</a>
-            <a href="/areas/mcallen.html" role="menuitem">[City 2]</a>
-            <a href="/areas/edinburg.html" role="menuitem">[City 3]</a>
-            <a href="/areas/mission.html" role="menuitem">[City 4]</a>
-            <a href="/areas/pharr.html" role="menuitem">[City 5]</a>
-            <a href="/areas/harlingen.html" role="menuitem">[City 6]</a>
-          </div>
-        </div>
-        <a href="/#insurance"   class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Insurance</a>
-        <a href="/about.html" class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">About</a>
-        <a href="/#reviews"     class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Reviews</a>
-        <a href="/#contact"     class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary text-sm py-2.5 px-5 phone-pulse ml-4">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (555) 000-0000
-        </a>
+    <!-- ========================================================
+         PROMO STRIP — SWAPPABLE / TIME-LIMITED.
+         Per CLAUDE.md these offers must NOT be baked into permanent
+         page copy or metadata. Rotate or remove the markup between the
+         PROMO-START / PROMO-END comments without touching the page body.
+    ========================================================= -->
+    <!-- PROMO-START -->
+    <div id="promo-strip" role="region" aria-label="Current promotions">
+      <div class="promo-inner">
+        <p class="promo-text">
+          <span class="promo-pill">Summer Sale</span>
+          <strong>5% off custom buildings</strong> &middot; <strong>$99 down</strong> on buildings $6,000 or less
+        </p>
       </div>
-
-      <!-- Mobile hamburger -->
-      <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu">
-        <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
+      <button id="promo-close" type="button" aria-label="Dismiss promotions">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
+    <!-- PROMO-END -->
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
-      <div class="flex flex-col gap-1 pt-4">
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
-          Services
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div id="mobile-services-submenu" class="mobile-services-submenu">
-          <a href="/services/storage-sheds.html">Service One</a>
-          <a href="/services/carports.html">Service Two</a>
-          <a href="/services/custom-buildings.html">Service Three</a>
-          <a href="/services/financing.html">Service Five</a>
-          <a href="/services/cabins-portable-offices.html">Service Four</a>
-          <a href="/services/inventory.html">Service Six</a>
-        </div>
-        <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
-          Areas We Serve
-          <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        </button>
-        <div id="mobile-areas-submenu" class="mobile-services-submenu">
-          <a href="/areas/alamo.html" aria-current="page">[City]</a>
-          <a href="/areas/mcallen.html">[City 2]</a>
-          <a href="/areas/edinburg.html">[City 3]</a>
-          <a href="/areas/mission.html">[City 4]</a>
-          <a href="/areas/pharr.html">[City 5]</a>
-          <a href="/areas/harlingen.html">[City 6]</a>
-        </div>
-        <a href="/#insurance" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Insurance</a>
-        <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
-        <a href="/#reviews"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Reviews</a>
-        <a href="/#contact"   class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
-        <a href="tel:+15550000000" class="btn-primary mt-3 justify-center">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Call (555) 000-0000
+    <!-- ========================================================
+         STICKY NAVIGATION
+    ========================================================= -->
+    <nav id="navbar" class="py-3">
+      <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+
+        <!-- LOGO PLACEHOLDER — wordmark stand-in. Swap to recolored "Sheds Up" owl logo
+             (charcoal on light / cream on dark) once the brand_assets image files are in place. -->
+        <a href="/" class="flex items-center group" aria-label="Mesquite Sheds & More home">
+          <span class="nav-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
         </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-7">
+          <div class="nav-dropdown">
+            <a href="#services" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
+              Buildings
+              <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Buildings & services">
+              <a href="/services/storage-sheds.html" role="menuitem">Storage Sheds</a>
+              <a href="/services/carports.html" role="menuitem">Carports</a>
+              <a href="/services/custom-buildings.html" role="menuitem">Custom Buildings</a>
+              <a href="/services/cabins-portable-offices.html" role="menuitem">Cabins &amp; Portable Offices</a>
+              <a href="/services/financing.html" role="menuitem">Financing</a>
+              <a href="/services/inventory.html" role="menuitem">View Inventory</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#service-area" class="nav-link nav-dropdown-trigger text-sm font-medium text-muted-light hover:text-white transition-colors duration-150" aria-haspopup="true">
+              Areas We Serve
+              <svg class="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Areas We Serve">
+              <a href="/areas/alamo.html" role="menuitem">Alamo</a>
+              <a href="/areas/mcallen.html" role="menuitem">McAllen</a>
+              <a href="/areas/edinburg.html" role="menuitem">Edinburg</a>
+              <a href="/areas/mission.html" role="menuitem">Mission</a>
+              <a href="/areas/pharr.html" role="menuitem">Pharr</a>
+              <a href="/areas/harlingen.html" role="menuitem">Harlingen</a>
+            </div>
+          </div>
+          <a href="#financing" class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Financing</a>
+          <a href="/about.html" class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">About</a>
+          <a href="#contact"    class="nav-link text-sm font-medium text-muted-light hover:text-white transition-colors duration-150">Contact</a>
+          <a href="tel:+19565866093" class="btn-primary text-sm py-2.5 px-5 ml-4">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (956) 586-6093
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="hamburger" class="md:hidden p-2 rounded-lg border border-white/10 text-white hover:border-white/30 transition-colors duration-150" aria-label="Open menu">
+          <svg id="hamburger-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
       </div>
-    </div>
-  </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden px-5 pb-4 mt-3 border-t border-white/10">
+        <div class="flex flex-col gap-1 pt-4">
+          <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-services-submenu">
+            Buildings
+            <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="mobile-services-submenu" class="mobile-services-submenu">
+            <a href="/services/storage-sheds.html">Storage Sheds</a>
+            <a href="/services/carports.html">Carports</a>
+            <a href="/services/custom-buildings.html">Custom Buildings</a>
+            <a href="/services/cabins-portable-offices.html">Cabins &amp; Portable Offices</a>
+            <a href="/services/financing.html">Financing</a>
+            <a href="/services/inventory.html">View Inventory</a>
+          </div>
+          <button type="button" class="mobile-services-toggle py-3 px-3 rounded-lg font-medium" aria-expanded="false" aria-controls="mobile-areas-submenu">
+            Areas We Serve
+            <svg class="nav-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="mobile-areas-submenu" class="mobile-services-submenu">
+            <a href="/areas/alamo.html">Alamo</a>
+            <a href="/areas/mcallen.html">McAllen</a>
+            <a href="/areas/edinburg.html">Edinburg</a>
+            <a href="/areas/mission.html">Mission</a>
+            <a href="/areas/pharr.html">Pharr</a>
+            <a href="/areas/harlingen.html">Harlingen</a>
+          </div>
+          <a href="#financing" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Financing</a>
+          <a href="/about.html" class="mobile-nav-link py-3 px-3 rounded-lg font-medium">About</a>
+          <a href="#contact"    class="mobile-nav-link py-3 px-3 rounded-lg font-medium">Contact</a>
+          <a href="tel:+19565866093" class="btn-primary mt-3 justify-center">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (956) 586-6093
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
 
   <!-- ============================================================
-       HERO
+       HERO — full-bleed photo + overlay (the ONE allowed text-on-photo section).
+       CITY-PAGE PHOTO TIER: this hero is the ONLY photo on the page. Body = text bands.
   ============================================================ -->
-  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(88px, 14vw, 128px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Home Services in [City 2], TX">
+  <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(150px, 18vw, 180px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Storage sheds in McAllen, TX — Mesquite Sheds & More">
 
-    <!-- Hero background photo -->
+    <!-- Hero background photo — PLACEHOLDER at final dimensions. Swap this src for a real
+         Mesquite shed/lot photo (1920×1080) before launch. -->
     <img
-      src="/brand_assets/Hero_background.jpg"
-      alt="Professional home services in [City 2], TX — Your Business Name serving the [Region]"
+      src="https://placehold.co/1920x1080?text=Mesquite+Sheds+%E2%80%94+Serving+McAllen,+TX"
+      alt="storage sheds and carports delivered to McAllen, TX by Mesquite Sheds in Alamo"
       aria-hidden="true"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;"
     />
 
-    <!-- Overlay -->
+    <!-- Dark overlay -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
-      linear-gradient(180deg, rgba(15,15,26,0.72) 0%, rgba(15,15,26,0.32) 25%, rgba(15,15,26,0.28) 65%, rgba(15,15,26,0.75) 100%),
-      radial-gradient(ellipse 65% 100% at 0% 50%, rgba(15,15,26,0.78) 0%, transparent 65%);
+      linear-gradient(180deg, rgba(30,25,22,0.74) 0%, rgba(30,25,22,0.36) 28%, rgba(30,25,22,0.34) 62%, rgba(30,25,22,0.80) 100%),
+      radial-gradient(ellipse 65% 100% at 0% 50%, rgba(30,25,22,0.80) 0%, transparent 65%);
     "></div>
 
     <!-- Edge vignette -->
@@ -666,484 +765,363 @@
       <div class="hero-text-block max-w-2xl fade-up">
 
         <!-- Breadcrumb -->
-        <nav class="breadcrumb mb-5" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span class="sep" aria-hidden="true">/</span>
-          <a href="/#service-area">Service Areas</a>
-          <span class="sep" aria-hidden="true">/</span>
-          <span class="current">[City 2]</span>
+        <nav class="mb-7 text-sm" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2" style="color: rgba(255,255,255,0.55);">
+            <li><a href="/" class="hover:underline" style="color: rgba(255,255,255,0.72);">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li><a href="/#service-area" class="hover:underline" style="color: rgba(255,255,255,0.72);">Areas We Serve</a></li>
+            <li aria-hidden="true">/</li>
+            <li><span aria-current="page" style="color: var(--color-primary-light);">McAllen</span></li>
+          </ol>
         </nav>
 
-        <!-- Trust badges -->
-        <div class="flex flex-wrap gap-2 mb-7">
-          <span class="trust-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Free Estimates
-          </span>
-          <span class="trust-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Same-Day Service
-          </span>
-          <span class="trust-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Local &amp; Trusted
-          </span>
-        </div>
-
         <!-- Eyebrow -->
-        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 20px; text-shadow: 0 1px 8px rgba(0,0,0,0.30);">Trusted Local Home Services</p>
+        <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 20px; text-shadow: 0 1px 8px rgba(0,0,0,0.30);">Areas We Serve &middot; McAllen, TX</p>
 
         <h1 class="font-display text-white mb-5" style="font-size: clamp(2.4rem, 6vw, 3.8rem); letter-spacing: -0.03em; line-height: 1.06; font-weight: 800; text-shadow: 0 2px 24px rgba(0,0,0,0.45);">
-          Home Services<br />
-          <span style="color: var(--color-primary);">in [City 2], TX</span>
+          Storage Sheds in<br />
+          <span style="color: var(--color-primary-light);">McAllen, TX</span>
         </h1>
 
-        <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.88); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
-          Looking for reliable home services in [City 2]? Your Business Name shows up on time, works clean, and treats your home like our own. Same-day appointments, fair pricing, and every job <strong style="color: #fff;">backed by our satisfaction guarantee</strong>.
+        <p class="mb-8 max-w-xl" style="color: rgba(255,255,255,0.90); font-size: clamp(1rem, 2.2vw, 1.125rem); line-height: 1.72; text-shadow: 0 1px 8px rgba(0,0,0,0.35);">
+          Need more space in McAllen? Mesquite Sheds &amp; More delivers storage sheds, carports, cabins, and custom buildings straight to McAllen from our Alamo lot just up Expressway 83. Buy off the lot or build your own &mdash; with <strong style="color: #fff;">free delivery &amp; set-up, no credit check, and rent-to-own</strong>.
         </p>
 
-        <!-- CTAs -->
         <div class="flex flex-wrap gap-4 mb-10">
-          <a href="tel:+15550000000" class="btn-primary text-base px-7 py-4">
+          <a href="tel:+19565866093" class="btn-primary text-base px-7 py-4">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
+            Call or Text — (956) 586-6093
           </a>
           <a href="/#contact" class="btn-outline text-base px-7 py-4">
-            Get a Free Quote
+            Get a Quote
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         </div>
 
-        <!-- Stats row -->
         <div class="flex flex-wrap gap-8">
           <div>
-            <div class="font-display font-700 text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Top</div>
-            <div class="text-muted-light text-sm mt-0.5">Five-Star Reviews</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
-            <div class="font-display font-700 text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Mobile</div>
-            <div class="text-muted-light text-sm mt-0.5">Service Available</div>
-          </div>
-          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
-          <div>
             <div class="font-display font-700 text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">Free</div>
-            <div class="text-muted-light text-sm mt-0.5">Free Estimates</div>
+            <div class="text-muted-light text-sm mt-0.5">Delivery &amp; Set-Up</div>
+          </div>
+          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
+          <div>
+            <div class="font-display font-700 text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">No</div>
+            <div class="text-muted-light text-sm mt-0.5">Credit Check</div>
+          </div>
+          <div class="w-px" style="background: rgba(255,255,255,0.14);"></div>
+          <div>
+            <div class="font-display font-700 text-2xl text-white" style="text-shadow: 0 1px 8px rgba(0,0,0,0.4);">On-Site</div>
+            <div class="text-muted-light text-sm mt-0.5">Inventory Ready</div>
           </div>
         </div>
+
       </div>
     </div>
 
-    <!-- Ember accent bridge -->
+    <!-- Barn-red accent bridge -->
     <div class="absolute bottom-0 left-0 right-0 z-20" style="height: 4px; background: linear-gradient(90deg, transparent 0%, var(--color-primary) 18%, var(--color-primary) 82%, transparent 100%); opacity: 0.90;"></div>
   </section>
 
-  <!-- ============================================================
-       MAIN CONTENT
-  ============================================================ -->
   <main id="main-content">
 
-    <!-- SECTION: intro -->
     <div class="divider"></div>
-    <section id="intro" class="section-dark atmo wash-navy-tr py-20" aria-label="Local home services in [City 2]">
+
+    <!-- ============================================================
+         S1 — CITY-SWAP: intro  (CREAM)  ·  centered text band
+         >>> CITY-SWAP: intro — REWRITE per city. McAllen-specific, NOT generic RGV boilerplate. <<<
+    ============================================================ -->
+    <section class="section-dark atmo wash-ember-tl py-20 lg:py-24" aria-label="Portable buildings for McAllen, TX">
       <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-start">
-
-          <!-- Left: prose -->
-          <div class="fade-up">
-            <div class="section-title-accent mb-3"></div>
-            <h2 class="font-display text-4xl lg:text-[2.75rem] font-700 text-white mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
-              Home Services [City 2] Counts On
-            </h2>
-            <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
-              Your Business Name is based right here in [City 2]. We are not a call center or an out-of-town franchise — we live and work in the [Region], and when you call, you talk to the same team that does the work. That is how we earned five-star reviews on Google — one honest job at a time.
-            </p>
-            <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
-              Homes in the [Region] take a beating from the weather, and small problems do not stay small for long. Put off a repair and it usually costs more later. We see it every week, and we know how fast you need it handled.
-            </p>
-            <p class="text-muted-light text-lg" style="line-height: 1.7;">
-              From [Neighborhood] to the [Highway] corridor and out toward [Landmark], our team keeps [City 2] homes in good shape. Most jobs are done the same day you call, and every one is backed by our satisfaction guarantee.
-            </p>
-          </div>
-
-          <!-- Right: trust signals -->
-          <div class="fade-up space-y-4">
-
-            <div class="feature-card flex items-start gap-4">
-              <div class="trust-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-700 text-base text-white mb-1">Based Right in [City 2]</h3>
-                <p class="text-muted-light text-sm" style="line-height: 1.6;">We are local to [City 2] and the [Region]. We know these neighborhoods, this weather, and what homes here need.</p>
-              </div>
-            </div>
-
-            <div class="feature-card flex items-start gap-4">
-              <div class="trust-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-700 text-base text-white mb-1">Same-Day Service</h3>
-                <p class="text-muted-light text-sm" style="line-height: 1.6;">Call in the morning and most [City 2] jobs are done by that afternoon — no week-long wait.</p>
-              </div>
-            </div>
-
-            <div class="feature-card flex items-start gap-4">
-              <div class="trust-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-700 text-base text-white mb-1">Works Directly With Your Insurance</h3>
-                <p class="text-muted-light text-sm" style="line-height: 1.6;">When your project is covered, we bill your carrier directly. Many claims cost you little or nothing out of pocket.</p>
-              </div>
-            </div>
-
-            <div class="feature-card flex items-start gap-4">
-              <div class="trust-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              </div>
-              <div>
-                <h3 class="font-display font-700 text-base text-white mb-1">Top Five-Star Reviews</h3>
-                <p class="text-muted-light text-sm" style="line-height: 1.6;">Real [City 2] homeowners, real results. Our team shows up in review after review.</p>
-              </div>
-            </div>
-
-          </div>
+        <!-- CITY-SWAP: intro -->
+        <div class="max-w-[720px] mx-auto text-center fade-up">
+          <div class="section-title-accent"></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">Serving McAllen</p>
+          <h2 class="font-display text-white mb-5" style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;">
+            Storage Sheds &amp; Buildings for McAllen Homes and Businesses
+          </h2>
+          <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
+            McAllen is the biggest city in the Valley, and space fills up fast &mdash; whether you're a growing family in North McAllen running out of garage room or a business near the medical district that needs covered storage. Mesquite Sheds &amp; More builds and delivers storage sheds, carports, cabins, and custom buildings to McAllen, so you get real, lasting space without a construction project.
+          </p>
+          <p class="text-muted-light text-lg mb-0" style="line-height: 1.7;">
+            Buy a building ready to go off our Alamo lot or design your own and pick the size, colors, doors, and add-ons. Either way it shows up to your McAllen address built and ready to use &mdash; with free delivery and set-up, no credit check, and rent-to-own.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SECTION: services -->
-    <section id="services" class="section-mid atmo wash-ember-tl py-20" aria-label="Home services in [City 2], TX">
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         S2 — CITY-SWAP: local anchors  (DARK ink-700)  ·  centered text band
+         >>> CITY-SWAP: local-anchors — REWRITE per city with REAL highways, neighborhoods,
+             and landmarks for that city, woven into prose (not a list). [VERIFY all names.] <<<
+    ============================================================ -->
+    <section class="dark-section section-ink700 atmo wash-navy-tr py-20 lg:py-24" aria-label="Delivering across McAllen, TX">
       <div class="max-w-6xl mx-auto px-5">
+        <!-- CITY-SWAP: local-anchors -->
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <div class="fade-up lg:order-1 order-2" style="transition-delay: 0.08s;">
+            <!-- CITY-PAGE BODY PHOTO (the one body photo; hero is separate). PLACEHOLDER at final
+                 dimensions — swap for a real Mesquite delivery/lot photo (720×540). Alt text is final. -->
+            <div class="content-photo aspect-[4/3]">
+              <img src="https://placehold.co/720x540?text=Delivered+in+McAllen" alt="Storage shed delivered and set up at a home in McAllen, TX by Mesquite Sheds" loading="lazy" width="720" height="540" />
+            </div>
+          </div>
+
+          <div class="fade-up lg:order-2 order-1">
+            <div class="section-title-accent"></div>
+            <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 12px;">All Over Town</p>
+            <h2 class="font-display text-white mb-5" style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;">
+              Delivering to Every Corner of McAllen
+            </h2>
+            <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
+              From the Alamo lot it's a straight shot west on Expressway 83 and Interstate 2 into McAllen, so we deliver all over the city. We set up buildings for homes off Ware Road, Nolana Avenue, and 10th Street, in North McAllen neighborhoods, and around Downtown McAllen and the medical district on the south side.
+            </p>
+            <p class="text-muted-light text-lg mb-0" style="line-height: 1.7;">
+              Whether you're near La Plaza Mall, out by McAllen International Airport, close to the McAllen Convention Center, or over by Quinta Mazatl&aacute;n, your building is delivered and set level right where you want it. Tight backyard or alley access? Tell us the spot and we'll plan the drop so it lands clean.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         S3 — CITY-SWAP: why this city  (CREAM)  ·  centered text band
+         >>> CITY-SWAP: why-city — REWRITE per city with a city-specific angle. <<<
+    ============================================================ -->
+    <section class="section-dark atmo wash-ember-tr py-20 lg:py-24" aria-label="Why McAllen chooses Mesquite Sheds & More">
+      <div class="max-w-6xl mx-auto px-5">
+        <!-- CITY-SWAP: why-city -->
+        <div class="max-w-[720px] mx-auto text-center fade-up">
+          <div class="section-title-accent"></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">Why McAllen Chooses Us</p>
+          <h2 class="font-display text-white mb-5" style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;">
+            McAllen's Go-To for Portable Buildings
+          </h2>
+          <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
+            As the largest city in the Rio Grande Valley, McAllen has the most homes, the most businesses, and the most demand for extra space &mdash; and being right next door in Alamo means we deliver there constantly. McAllen sits comfortably inside our 50-mile free-delivery radius, so you get the delivery and set-up free, not tacked onto the price.
+          </p>
+          <p class="text-muted-light text-lg mb-0" style="line-height: 1.7;">
+            McAllen customers stick with us because we're local and family-run &mdash; Manny and Alondra know the area, answer the phone themselves, and back every building with Stor-Mor construction standards built for RGV heat, wind, and heavy rain. No big-box runaround, just a solid building delivered close to home.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         S4 — SHARED: services overview  (DARK ink-700)  ·  cross-link grid
+         >>> SHARED across all cities — do NOT city-swap. Brief links to the service pages. <<<
+    ============================================================ -->
+    <section class="dark-section section-ink700 atmo wash-navy-bl py-20 lg:py-24" aria-label="Buildings we deliver">
+      <div class="max-w-5xl mx-auto px-5">
         <div class="text-center mb-12 fade-up">
           <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-700 text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Every Home Service [City 2] Needs
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 12px;">What We Deliver</p>
+          <h2 class="font-display text-white mb-4" style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;">
+            Everything We Build &amp; Deliver
           </h2>
           <p class="text-muted-light text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Whatever your home needs, Your Business Name handles the full job — right here in [City 2], from the first call to the final walkthrough.
+            Every building line we carry is available for delivery and set-up, ready off the lot or built to order.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up">
-
-          <a href="/services/storage-sheds.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="3"/><path d="M2 11h20"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service One</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">When the job calls for a full replacement or install, [City 2] homeowners count on us. We use quality materials matched to the work, complete most jobs the same day, and leave a clean, precise result.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 fade-up" style="transition-delay: 0.06s;">
+          <a href="/services/storage-sheds.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">Storage Sheds</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Portable storage in the sizes Valley families and businesses actually use.</p>
           </a>
-
-          <a href="/services/carports.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M3 17L7 7h10l4 10H3z"/><path d="M11 7.5l1.5 3.5-1 2.5" stroke-width="1.6" opacity="0.65"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service Two</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">A faster, smaller-scale fix handled the right way. We take care of it efficiently — often in about an hour — and the work in [City 2] is backed by our satisfaction guarantee.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <a href="/services/carports.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">Carports</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Vehicle, shade, and BBQ cover sized to your space, for home or business.</p>
           </a>
-
-          <a href="/services/custom-buildings.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service Three</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Restore and protect what you already have. Our team brings it back to like-new condition, and [City 2] homeowners notice the difference right away — no full replacement needed.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <a href="/services/custom-buildings.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">Custom Buildings</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Build your own &mdash; pick the type, size, colors, and add-ons.</p>
           </a>
-
-          <a href="/services/financing.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service Five</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">When something needs replacing, we handle it the same day across [City 2] — clean work, nothing left behind, and a precise, factory-grade fit.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <a href="/services/cabins-portable-offices.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">Cabins &amp; Portable Offices</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Finished, livable interiors for an office, studio, or retreat.</p>
           </a>
-
-          <a href="/services/cabins-portable-offices.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service Four</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">You should not have to wait around. Our team brings mobile service to your [City 2] home, office, or job site — wherever works for you.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <a href="/services/financing.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">Financing</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Rent-to-own with no credit check, or buy outright.</p>
           </a>
-
-          <a href="/services/inventory.html" class="service-card block">
-            <div class="icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3"/><rect x="9" y="11" width="14" height="10" rx="2"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-white text-xl mb-2">Service Six</h3>
-            <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">When you need it handled fast, our team responds quickly — using quality materials and the same careful work we bring to every job in [City 2]. Just ask and we'll take care of it.</p>
-            <span class="link-arrow">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+          <a href="/services/inventory.html" class="area-card" style="padding: 26px 28px; display:block;">
+            <h3 class="font-display font-700 text-lg mb-1.5" style="color: var(--color-ink);">View Inventory</h3>
+            <p class="text-sm" style="line-height: 1.65; color: var(--color-body);">Browse what's on the Alamo lot right now, with live pricing.</p>
           </a>
-
         </div>
       </div>
     </section>
 
-    <!-- SECTION: insurance -->
-    <section id="insurance" class="dark-section py-20" aria-label="Insurance and financing for home services in [City 2]">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="grid lg:grid-cols-2 gap-14 items-center">
+    <div class="divider"></div>
 
-          <!-- Left: copy -->
-          <div class="fade-up">
-            <div class="section-title-accent mb-3"></div>
-            <h2 class="font-display text-4xl font-700 text-white mb-6" style="letter-spacing: -0.03em; line-height: 1.1;">
-              Insurance &amp; Financing in [City 2]
-            </h2>
-            <p class="text-muted-light text-lg mb-5" style="line-height: 1.7;">
-              If your project is covered by your insurance, there is a good chance much of the cost is already taken care of. Your Business Name helps [City 2] homeowners make sense of what their policy covers — and what it doesn't — before any work begins.
-            </p>
-            <p class="text-muted-light text-lg mb-8" style="line-height: 1.7;">
-              We work directly with your insurance carrier, so you are not stuck sorting out the paperwork alone. We tell you your out-of-pocket cost upfront, before any work starts. Not sure if you are covered? Call and we will check it together.
-            </p>
-            <a href="tel:+15550000000" class="btn-primary text-base px-7 py-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Check Your Coverage — (555) 000-0000
+    <!-- ============================================================
+         S5 — SHARED: trust signals  (CREAM)  ·  centered text band
+         >>> SHARED across all cities — do NOT city-swap. <<<
+    ============================================================ -->
+    <section class="section-dark atmo wash-ember-tl py-20 lg:py-24" aria-label="Why buy from Mesquite Sheds & More">
+      <div class="max-w-6xl mx-auto px-5">
+        <div class="max-w-[720px] mx-auto text-center fade-up">
+          <div class="section-title-accent"></div>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 12px;">Why Buy From Us</p>
+          <h2 class="font-display text-white mb-5" style="font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;">
+            Free Delivery, No Credit Check, Built to Last
+          </h2>
+          <p class="text-muted-light text-lg mb-8" style="line-height: 1.7;">
+            The price on the building is the price. Here's what comes with every order, no matter which Valley city we're delivering to.
+          </p>
+
+          <div class="space-y-3.5 mb-8 inline-flex flex-col items-start text-left">
+            <div class="check-row">
+              <span class="check-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="font-display font-700 text-white" style="font-size: 1rem;">Free delivery &amp; set-up within 50 miles of Alamo</span>
+            </div>
+            <div class="check-row">
+              <span class="check-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="font-display font-700 text-white" style="font-size: 1rem;">No credit check &mdash; easy, fast approval</span>
+            </div>
+            <div class="check-row">
+              <span class="check-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="font-display font-700 text-white" style="font-size: 1rem;">On-site inventory ready for quick delivery</span>
+            </div>
+            <div class="check-row">
+              <span class="check-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <span class="font-display font-700 text-white" style="font-size: 1rem;">Backed by Stor-Mor construction standards</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap items-center justify-center gap-5">
+            <a href="/services/financing.html" class="btn-primary">
+              See Financing Options
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a href="tel:+19565866093" class="link-arrow">
+              Call or text (956) 586-6093
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
-
-          <!-- Right: insurer pills -->
-          <div class="fade-up">
-            <p class="text-muted-light text-sm font-600 uppercase tracking-widest mb-5">We Work Directly With These Carriers</p>
-            <!-- PLACEHOLDER: replace with the client's actual insurance carriers / financing partners (or remove this section if they don't bill insurance) -->
-            <div class="flex flex-wrap gap-3">
-              <span class="insurer-pill">Allstate</span>
-              <span class="insurer-pill">USAA</span>
-              <span class="insurer-pill">Geico</span>
-              <span class="insurer-pill">Nationwide</span>
-              <span class="insurer-pill">Progressive</span>
-              <span class="insurer-pill">Liberty Mutual</span>
-              <span class="insurer-pill">Farmers Insurance</span>
-              <span class="insurer-pill">Assurance</span>
-            </div>
-            <p class="text-muted-light text-sm mt-5" style="line-height: 1.7;">Don't see your carrier? Call <a href="tel:+15550000000" class="text-white font-600 hover:opacity-80 transition-opacity">(555) 000-0000</a> and we'll check your coverage together.</p>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- SECTION: neighborhoods -->
-    <section id="neighborhoods" class="section-mid atmo wash-navy-br py-20" aria-label="[City 2] neighborhoods Your Business Name serves">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-700 text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Home Services in Every [City 2] Neighborhood
-          </h2>
-          <p class="text-muted-light text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            From one side of town to the other, our team covers all of [City 2]. Here is where [City 2] homeowners find us most.
-          </p>
-        </div>
+    <div class="divider-strong"></div>
 
-        <!-- TEMPLATE NOTE: give each city page UNIQUE local content — real neighborhoods, landmarks, and highways per city. Do not reuse the same copy across city pages (Google penalizes duplicate "doorway" pages). See CLAUDE.md → City pages anti-duplicate rule. -->
-        <div class="area-card fade-up">
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-6">
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">[Neighborhood] (Central [City 2])</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">Our home turf. Jobs in central [City 2] near [Landmark] are usually same-day.</p>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">Downtown [City 2]</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">We serve homes and businesses across downtown [City 2], on-site so you can keep your day moving.</p>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">[Neighborhood]</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">Our team meets [City 2] customers right at home or work, so a repair never means putting your whole day on hold.</p>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">The [Highway] Corridor</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">Quick to reach along the [Highway] — we cover the busy [City 2] corridors with same-day service.</p>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">[Neighborhood] (South [City 2])</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">Out toward [Landmark] and the edge of town, we keep the same fast turnaround and fair pricing.</p>
-            </div>
-
-            <div>
-              <div class="flex items-center gap-2.5 mb-2">
-                <div class="area-dot"></div>
-                <h3 class="font-display font-700 text-base text-white">Across the [Region]</h3>
-              </div>
-              <p class="text-muted-light text-sm" style="line-height: 1.6; padding-left: 22px;">Your Business Name serves the whole [Region] — <a href="/areas/alamo.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City]</a>, <a href="/areas/mcallen.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City 2]</a>, <a href="/areas/edinburg.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City 3]</a>, <a href="/areas/mission.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City 4]</a>, <a href="/areas/pharr.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City 5]</a>, and <a href="/areas/harlingen.html" class="font-600 hover:opacity-80 transition-opacity" style="color: var(--color-primary);">[City 6]</a>. Wherever you are, we come to you.</p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: why-us -->
-    <section id="why-us" class="dark-section atmo py-20" aria-label="Why [City 2] chooses Your Business Name">
-      <div class="max-w-6xl mx-auto px-5">
-        <div class="text-center mb-12 fade-up">
-          <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-700 text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Why [City 2] Chooses Your Business Name
-          </h2>
-          <p class="text-muted-light text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
-            Your Business Name was built on honesty, attention to detail, and dedication. Every job gets the same care — the kind that keeps [City 2] coming back.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 fade-up">
-
-          <div class="feature-card text-center">
-            <div class="icon-wrap mx-auto">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-base text-white mb-2">Service You Can Trust</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.6;">You deal with the same team every time — the people [City 2] homeowners praise across five-star reviews.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="icon-wrap mx-auto">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-base text-white mb-2">Satisfaction Guaranteed</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.6;">Every job is backed by our satisfaction guarantee. If something isn't right, we come back and make it right.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="icon-wrap mx-auto">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-base text-white mb-2">Fair, Honest Pricing</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.6;">You get your price before any work starts — no hidden fees, no surprises when the job is done.</p>
-          </div>
-
-          <div class="feature-card text-center">
-            <div class="icon-wrap mx-auto">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h3 class="font-display font-700 text-base text-white mb-2">Quick Response</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.6;">Same-day service across [City 2]. Our team explains each step so you know exactly what your home needs.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- SECTION: faq -->
-    <section id="faq" class="section-mid atmo wash-navy-bl py-20" aria-label="[City 2] home services FAQ">
+    <!-- ============================================================
+         FAQ (WARM surface-100)  +  FAQPage JSON-LD in <head>
+    ============================================================ -->
+    <!-- >>> CITY-SWAP: faq — REWRITE per city; must mirror the FAQPage JSON-LD in <head> exactly. <<< -->
+    <section id="faq" class="section-mid atmo wash-navy-tr py-20 lg:py-24" aria-label="McAllen storage shed questions and answers">
       <div class="max-w-3xl mx-auto px-5">
+
         <div class="text-center mb-12 fade-up">
           <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
-          <h2 class="font-display text-4xl font-700 text-white mb-4" style="letter-spacing: -0.03em; line-height: 1.1;">
-            Common Questions About Home Services in [City 2]
+          <h2 class="font-display text-4xl lg:text-5xl font-700 text-white mb-4" style="letter-spacing: -0.03em;">
+            McAllen Questions, Answered
           </h2>
+          <p class="text-muted-light text-lg max-w-2xl mx-auto" style="line-height: 1.7;">
+            A few things McAllen buyers ask before they order. Don't see your question? Call or text us &mdash; we're happy to help.
+          </p>
         </div>
 
-        <div class="space-y-4 fade-up">
+        <!-- CITY-SWAP: faq -->
+        <div class="space-y-4 fade-up" style="transition-delay: 0.06s;">
 
-          <div class="feature-card">
-            <h3 class="font-display font-700 text-base text-white mb-2">Do you come to me in [City 2]?</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.7;">Yes. Our team runs mobile service across all of [City 2], so most jobs happen at your home, office, or wherever works for you. Prefer to reach us another way? Just call and we'll sort it out.</p>
+          <div class="area-card" style="padding: 26px 30px;">
+            <h3 class="font-display font-700 text-white text-lg mb-2">Do you deliver storage sheds to McAllen?</h3>
+            <p class="text-muted-light" style="line-height: 1.7;">Yes. McAllen sits well inside our 50-mile free-delivery range from the Alamo lot, so delivery and set-up to McAllen are free. We bring your building out, set it level, and make sure it's ready to use before we leave.</p>
           </div>
 
-          <div class="feature-card">
-            <h3 class="font-display font-700 text-base text-white mb-2">How fast can you get to my [City 2] job?</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.7;">Most [City 2] jobs are same-day. Call in the morning and we can usually take care of it by that afternoon, depending on what the job needs.</p>
+          <div class="area-card" style="padding: 26px 30px;">
+            <h3 class="font-display font-700 text-white text-lg mb-2">How fast can you deliver to McAllen?</h3>
+            <p class="text-muted-light" style="line-height: 1.7;">If you buy from our on-site inventory in Alamo, we can often deliver to McAllen within a few days since it's just up Expressway 83 from the lot. A custom build is made at the Stor-Mor shop first, which usually takes a few weeks depending on the options you choose.</p>
           </div>
 
-          <div class="feature-card">
-            <h3 class="font-display font-700 text-base text-white mb-2">Will my insurance cover the cost?</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.7;">Many projects are covered by insurance, sometimes at little or no cost to you. We work directly with most major carriers, and we tell you your cost before any work begins.</p>
+          <div class="area-card" style="padding: 26px 30px;">
+            <h3 class="font-display font-700 text-white text-lg mb-2">Where is your lot relative to McAllen?</h3>
+            <p class="text-muted-light" style="line-height: 1.7;">Our lot is at 97 E Bus Hwy 83 in Alamo, a short drive east of McAllen along Business 83 and Expressway 83. Most McAllen customers reach us in well under half an hour, and delivery comes right back the same way.</p>
           </div>
 
-          <div class="feature-card">
-            <h3 class="font-display font-700 text-base text-white mb-2">My problem seems small — should I wait?</h3>
-            <p class="text-muted-light text-sm" style="line-height: 1.7;">Usually not. Small problems tend to get bigger — and more expensive — the longer they wait. Most jobs are quick and quoted upfront, so it's worth calling early.</p>
+          <div class="area-card" style="padding: 26px 30px;">
+            <h3 class="font-display font-700 text-white text-lg mb-2">Can McAllen customers see the inventory in person?</h3>
+            <p class="text-muted-light" style="line-height: 1.7;">Absolutely. Come walk the Alamo lot and see storage sheds, carports, and cabins in person before you decide. You can also browse our <a href="/services/inventory.html" class="font-semibold hover:underline" style="color: var(--color-primary);">live inventory</a> online any time, then call or text (956) 586-6093 with questions.</p>
+          </div>
+
+          <div class="area-card" style="padding: 26px 30px;">
+            <h3 class="font-display font-700 text-white text-lg mb-2">Do you offer no-credit-check financing for McAllen buyers?</h3>
+            <p class="text-muted-light" style="line-height: 1.7;">Yes. McAllen customers get the same rent-to-own with no credit check and low monthly payments, or you can buy outright. Contracts are signed in person at the Alamo lot, and most people are approved fast.</p>
           </div>
 
         </div>
+
+        <div class="text-center mt-12 fade-up" style="transition-delay: 0.1s;">
+          <a href="tel:+19565866093" class="btn-primary text-base px-7 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call or Text — (956) 586-6093
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <!-- SECTION: final-cta -->
-    <!-- Standard pattern: cta-background.jpg + dark overlay + gradient layers -->
-    <section class="dark-section relative py-24 overflow-hidden" aria-label="Get home services in [City 2] today">
-      <div class="absolute inset-0" style="background: url('/brand_assets/cta-background.jpg') center center / cover no-repeat;"></div>
-      <div class="absolute inset-0" style="background: rgba(20,20,34,0.62);"></div>
+    <div class="divider"></div>
+
+    <!-- ============================================================
+         FINAL CTA — solid deep charcoal (--color-ink), NO photo, dual CTA
+    ============================================================ -->
+    <!-- >>> SHARED CTA — identical across all city pages; do NOT city-swap. <<< -->
+    <section class="dark-section relative py-24 overflow-hidden" aria-label="Get a building from Mesquite Sheds & More">
+      <div class="absolute inset-0" style="background:
+        radial-gradient(ellipse 70% 80% at 50% 0%,   rgba(var(--color-ink-900-rgb),0.55) 0%, transparent 62%),
+        radial-gradient(ellipse 50% 45% at 0% 100%,   rgba(var(--color-primary-rgb),0.18) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 45% at 100% 100%, rgba(var(--color-primary-rgb),0.13) 0%, transparent 55%),
+        var(--color-ink);"></div>
       <div class="dark-cta-ramp"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-ink-rgb),0.44) 0%, transparent 65%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(130,40,32,0.16) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(130,40,32,0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 45% 35% at 50% 78%, rgba(var(--color-primary-rgb),0.12) 0%, transparent 55%);"></div>
-      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(0,0,0,0.36) 100%); pointer-events: none;"></div>
 
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
         <h2 class="font-display text-4xl lg:text-5xl font-800 text-white mb-5" style="letter-spacing: -0.03em; line-height: 1.1;">
-          Need Home Services in [City 2]?<br /><span style="color: var(--color-primary);">Call Your Business Name Today.</span>
+          Ready for More Space<br /><span style="color: var(--color-primary-light);">in the Rio Grande Valley?</span>
         </h2>
         <p class="text-muted-light text-lg mb-10 max-w-xl mx-auto" style="line-height: 1.7;">
-          Same-day service, mobile to your door, and every job backed by our satisfaction guarantee. Our team covers all of [City 2] and the [Region]. Call now or fill out the quote form and we'll reach out fast.
+          Come by the lot in Alamo or give us a call. We've got storage sheds, carports, and cabins ready to deliver, custom builds to order, free delivery and set-up within 50 miles, and no credit check to get started.
         </p>
-        <div class="flex flex-wrap gap-4 justify-center mb-10">
-          <a href="tel:+15550000000" class="btn-primary text-base px-8 py-4">
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="tel:+19565866093" class="btn-primary text-base px-8 py-4">
             <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Call Now — (555) 000-0000
+            Call or Text — (956) 586-6093
           </a>
           <a href="/#contact" class="btn-outline text-base px-8 py-4">
-            Get a Free Quote
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            Get a Quote
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-5">
+        <div class="flex flex-wrap items-center justify-center gap-5 mt-10">
           <span class="flex items-center gap-1.5 text-muted-light text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Free estimates
+            Free delivery &amp; set-up
           </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
+          <span style="color: rgba(255,255,255,0.20);">&middot;</span>
           <span class="flex items-center gap-1.5 text-muted-light text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Fair, honest pricing
+            No credit check
           </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
+          <span style="color: rgba(255,255,255,0.20);">&middot;</span>
           <span class="flex items-center gap-1.5 text-muted-light text-sm">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Mobile service
-          </span>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <span class="flex items-center gap-1.5 text-muted-light text-sm">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            Same-day availability
+            Rent-to-own
           </span>
         </div>
       </div>
     </section>
 
   </main>
-
   <!-- ============================================================
        FOOTER
   ============================================================ -->
@@ -1153,34 +1131,34 @@
 
         <!-- Brand -->
         <div class="col-span-2 md:col-span-1">
-          <!-- LOGO PLACEHOLDER — replace <span> with <img> when client logo is ready -->
-          <a href="/" class="flex items-center mb-2" aria-label="Your Business Name home">
-            <span class="footer-wordmark">Your Business Name</span>
+          <!-- LOGO PLACEHOLDER — wordmark stand-in; swap to cream "Sheds Up" owl logo on dark once asset files are in place. -->
+          <a href="/" class="flex items-center mb-2" aria-label="Mesquite Sheds & More home">
+            <span class="footer-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
           </a>
-          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 14px; opacity: 0.85;">Trusted Local Home Services</p>
-          <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Professional home services you can count on — serving [City] and the surrounding [Region].</p>
+          <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 14px; opacity: 0.95;">Portable Buildings &middot; Alamo, TX</p>
+          <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Storage sheds, carports, cabins, and custom buildings &mdash; built by Stor-Mor and delivered across the Rio Grande Valley. Authorized Stor-Mor Dealer #878.</p>
           <div class="space-y-2">
-            <a href="tel:+15550000000" class="flex items-center gap-2 text-white text-sm font-medium hover:opacity-80 transition-opacity duration-150">
+            <a href="tel:+19565866093" class="flex items-center gap-2 text-white text-sm font-medium hover:opacity-80 transition-opacity duration-150">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.54 6.54l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              (555) 000-0000
+              (956) 586-6093
             </a>
-            <a href="mailto:hello@yourbusiness.com" class="flex items-center gap-2 text-muted-light text-sm hover:text-white transition-colors duration-150">
+            <a href="mailto:sandrareynashedsup2023@yahoo.com" class="flex items-center gap-2 text-muted-light text-sm hover:text-white transition-colors duration-150">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-light)" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              hello@yourbusiness.com
+              <span style="word-break: break-all;">sandrareynashedsup2023@yahoo.com</span>
             </a>
           </div>
         </div>
 
-        <!-- Services -->
+        <!-- Buildings -->
         <div>
-          <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Services</h2>
+          <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Buildings</h2>
           <ul class="space-y-2.5">
-            <li><a href="/services/carports.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Two</a></li>
-            <li><a href="/services/storage-sheds.html"       class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service One</a></li>
-            <li><a href="/services/custom-buildings.html"        class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Three</a></li>
-            <li><a href="/services/cabins-portable-offices.html"    class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Four</a></li>
-            <li><a href="/services/financing.html"           class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Five</a></li>
-            <li><a href="/services/inventory.html"  class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Six</a></li>
+            <li><a href="/services/storage-sheds.html"            class="text-muted-light text-sm hover:text-white transition-colors duration-150">Storage Sheds</a></li>
+            <li><a href="/services/carports.html"                 class="text-muted-light text-sm hover:text-white transition-colors duration-150">Carports</a></li>
+            <li><a href="/services/custom-buildings.html"         class="text-muted-light text-sm hover:text-white transition-colors duration-150">Custom Buildings</a></li>
+            <li><a href="/services/cabins-portable-offices.html"  class="text-muted-light text-sm hover:text-white transition-colors duration-150">Cabins &amp; Portable Offices</a></li>
+            <li><a href="/services/financing.html"                class="text-muted-light text-sm hover:text-white transition-colors duration-150">Financing</a></li>
+            <li><a href="/services/inventory.html"                class="text-muted-light text-sm hover:text-white transition-colors duration-150">View Inventory</a></li>
           </ul>
         </div>
 
@@ -1188,12 +1166,10 @@
         <div>
           <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Company</h2>
           <ul class="space-y-2.5">
-            <li><a href="/#why-us"       class="text-muted-light text-sm hover:text-white transition-colors duration-150">About Us</a></li>
-            <li><a href="/#reviews"      class="text-muted-light text-sm hover:text-white transition-colors duration-150">Reviews</a></li>
-            <li><a href="/#insurance"    class="text-muted-light text-sm hover:text-white transition-colors duration-150">Insurance Partners</a></li>
-            <li><a href="/#service-area" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Service Areas</a></li>
-            <li><a href="/#contact"      class="text-muted-light text-sm hover:text-white transition-colors duration-150">Contact</a></li>
-            <li><a href="#"              class="text-muted-light text-sm hover:text-white transition-colors duration-150">Privacy Policy</a></li>
+            <li><a href="/about.html"   class="text-muted-light text-sm hover:text-white transition-colors duration-150">About Us</a></li>
+            <li><a href="#financing"    class="text-muted-light text-sm hover:text-white transition-colors duration-150">Financing</a></li>
+            <li><a href="#service-area" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Areas We Serve</a></li>
+            <li><a href="#contact"      class="text-muted-light text-sm hover:text-white transition-colors duration-150">Contact</a></li>
           </ul>
         </div>
 
@@ -1201,12 +1177,12 @@
         <div>
           <h2 class="font-display font-700 text-white text-sm uppercase tracking-widest mb-4">Areas We Serve</h2>
           <ul class="space-y-2.5">
-            <li><a href="/areas/alamo.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City]</a></li>
-            <li><a href="/areas/mcallen.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 2]</a></li>
-            <li><a href="/areas/edinburg.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 3]</a></li>
-            <li><a href="/areas/mission.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 4]</a></li>
-            <li><a href="/areas/pharr.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 5]</a></li>
-            <li><a href="/areas/harlingen.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">[City 6]</a></li>
+            <li><a href="/areas/alamo.html"     class="text-muted-light text-sm hover:text-white transition-colors duration-150">Alamo</a></li>
+            <li><a href="/areas/mcallen.html"   class="text-muted-light text-sm hover:text-white transition-colors duration-150">McAllen</a></li>
+            <li><a href="/areas/edinburg.html"  class="text-muted-light text-sm hover:text-white transition-colors duration-150">Edinburg</a></li>
+            <li><a href="/areas/mission.html"   class="text-muted-light text-sm hover:text-white transition-colors duration-150">Mission</a></li>
+            <li><a href="/areas/pharr.html"     class="text-muted-light text-sm hover:text-white transition-colors duration-150">Pharr</a></li>
+            <li><a href="/areas/harlingen.html" class="text-muted-light text-sm hover:text-white transition-colors duration-150">Harlingen</a></li>
           </ul>
         </div>
 
@@ -1216,25 +1192,36 @@
 
       <div class="flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-muted-light text-xs text-center sm:text-left">
-          © 2026 Your Business Name. All rights reserved. Serving [City] &amp; the [Region], TX.
+          © 2026 Mesquite Sheds &amp; More. All rights reserved. Serving Alamo &amp; the Rio Grande Valley, TX.
         </p>
         <div class="flex items-center gap-4">
-          <a href="#" class="text-xs text-muted-light hover:text-white transition-colors duration-150">Privacy Policy</a>
-          <span style="color: rgba(255,255,255,0.20);">·</span>
-          <a href="#" class="text-xs text-muted-light hover:text-white transition-colors duration-150">Terms</a>
+          <a href="/about.html" class="text-xs text-muted-light hover:text-white transition-colors duration-150">About</a>
+          <span style="color: rgba(255,255,255,0.20);">&middot;</span>
+          <a href="#contact" class="text-xs text-muted-light hover:text-white transition-colors duration-150">Contact</a>
         </div>
       </div>
     </div>
   </footer>
 
   <script>
-    /* ── Sticky nav scrolled state ── */
+    // Promo strip dismiss (persists per browser). Swappable banner — see PROMO-START/END markup.
+    (function () {
+      const KEY = 'mesquite_promo_dismissed_v1';
+      try { if (localStorage.getItem(KEY) === '1') document.body.classList.add('promo-dismissed'); } catch (e) {}
+      const closeBtn = document.getElementById('promo-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          document.body.classList.add('promo-dismissed');
+          try { localStorage.setItem(KEY, '1'); } catch (e) {}
+        });
+      }
+    })();
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
 
-    /* ── Mobile hamburger toggle ── */
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
     hamburger.addEventListener('click', () => {
@@ -1255,7 +1242,6 @@
       }
     });
 
-    /* ── Scroll-triggered fade-up ── */
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1268,8 +1254,8 @@
   </script>
 
   <!-- GHL CHAT WIDGET SCRIPT GOES HERE -->
-
   <!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->
+  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
 
 </body>
 </html>
