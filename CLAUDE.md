@@ -60,6 +60,31 @@ All cities are in the Rio Grande Valley, Texas. The site should feel locally roo
 - Backed by Stor-Mor construction standards/quality
 - Contracts signed in person at the Alamo lot
 
+### Cabins & Portable Offices — Smart Space Interior Finishing
+
+Stor-Mor "Smart Space" is an interior-finishing upgrade that converts a shell
+building into a finished, livable/workable interior. Finishing options:
+- Interior paneling
+- Trim
+- Paint
+- Optional insulation
+- Optional electrical
+- Optional mini-split (heating/cooling)
+
+Use cases for finished cabins / portable offices: backyard office, studio,
+hobby/homeschool room, man cave, weekend retreat, small retail space.
+
+EXCLUSION (must always ride with any Smart Space mention — do not omit):
+Smart Space interior finishing is NOT available for:
+- Lofted Style buildings
+- Metal Buildings
+- Greenhouses
+- Tru-Valu Series
+
+Pricing: Smart Space upgrades are quote-driven (vary by finish level and options) —
+do NOT publish Smart Space prices. Route to quote/visit/call, same as all other
+pricing on the site.
+
 ### Service Details
 
 **Specialty / Core Focus:**
