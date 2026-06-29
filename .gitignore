@@ -1,3 +1,21 @@
 node_modules/
 temporary screenshots/
 .DS_Store
+
+# Hero video work files — only the final optimized brand_assets/hero.mp4 ships
+brand_assets/hero-source.mp4
+brand_assets/hero-trim-preview.mp4
+
+# Excluded / superseded brand assets — never ship these (keeps a blanket
+# `git add brand_assets/` from re-including them).
+# herobackground.png: orphan from earlier work, unreferenced
+# carport1.jpg: readable license plate; carport2/3.jpg: excluded
+# barn6in.jpg: interior, excluded; barn6.png: low-res dup of barn6.jpg
+# cta.png: 1.7MB original, superseded by optimized cta.jpg
+brand_assets/herobackground.png
+brand_assets/carport1.jpg
+brand_assets/carport2.jpg
+brand_assets/carport3.jpg
+brand_assets/barn6in.jpg
+brand_assets/barn6.png
+brand_assets/cta.png
