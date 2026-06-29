@@ -202,6 +202,11 @@
       letter-spacing: -0.02em; color: #fff; line-height: 1;
     }
     .footer-wordmark .plus { color: var(--color-primary); }
+    .nav-logo { height: 80px; width: auto; display: block; }
+    .nav-logo-scrolled { display: none; }
+    #navbar.scrolled .nav-logo-default { display: none; }
+    #navbar.scrolled .nav-logo-scrolled { display: block; }
+    .footer-logo { height: 120px; width: auto; display: block; }
 
     /* ---- Topbar wrapper (promo strip + nav, fixed together) ---- */
     #topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
@@ -663,7 +668,8 @@
         <!-- LOGO PLACEHOLDER — wordmark stand-in. Swap to recolored "Sheds Up" owl logo
              (charcoal on light / cream on dark) once the brand_assets image files are in place. -->
         <a href="/" class="flex items-center group" aria-label="Mesquite Sheds & More home">
-          <span class="nav-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
+          <img src="/brand_assets/logo_cream_nav@2x_h160.png" alt="Mesquite Sheds & More" class="nav-logo nav-logo-default" width="113" height="80" />
+          <img src="/brand_assets/logo_charcoal_nav@2x_h160.png" alt="Mesquite Sheds & More" class="nav-logo nav-logo-scrolled" width="113" height="80" />
         </a>
 
         <!-- Desktop Nav -->
@@ -894,7 +900,7 @@
           <div class="fade-up lg:order-1 order-2" style="transition-delay: 0.08s;">
             <!-- PLACEHOLDER PHOTO — swap for a real photo (720×540). Alt text is final. -->
             <div class="content-photo aspect-[4/3]">
-              <img src="https://placehold.co/720x540?text=Shade+%26+Backyard+Cover" alt="Carport used as a backyard shade structure over a patio and BBQ area in the Rio Grande Valley" loading="lazy" width="720" height="540" />
+              <img src="/brand_assets/carport.jpg" alt="Carport used as a backyard shade structure over a patio and BBQ area in the Rio Grande Valley" loading="lazy" width="720" height="540" />
             </div>
           </div>
 
@@ -984,7 +990,7 @@
           <div class="fade-up lg:order-1 order-2" style="transition-delay: 0.08s;">
             <!-- PLACEHOLDER PHOTO — swap for a real photo (720×540). Alt text is final. -->
             <div class="content-photo aspect-[4/3]">
-              <img src="https://placehold.co/720x540?text=Carport+Delivered+%26+Set+Up" alt="Newly installed metal carport delivered and set up at a home in Alamo, TX" loading="lazy" width="720" height="540" />
+              <img src="/brand_assets/carport4.jpg" alt="Metal carport ready for delivery from our Alamo lot" loading="lazy" width="720" height="540" />
             </div>
           </div>
 
@@ -1130,12 +1136,14 @@
          FINAL CTA — solid deep charcoal (--color-ink), NO photo, dual CTA
     ============================================================ -->
     <section class="dark-section relative py-24 overflow-hidden" aria-label="Get your carport from Mesquite Sheds & More">
-      <div class="absolute inset-0" style="background:
-        radial-gradient(ellipse 70% 80% at 50% 0%,   rgba(var(--color-ink-900-rgb),0.55) 0%, transparent 62%),
-        radial-gradient(ellipse 50% 45% at 0% 100%,   rgba(var(--color-primary-rgb),0.18) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 45% at 100% 100%, rgba(var(--color-primary-rgb),0.13) 0%, transparent 55%),
-        var(--color-ink);"></div>
+      <!-- CTA background image (cta) + overlay/vignette — matches homepage CTA pattern -->
+      <div class="absolute inset-0" style="background: url('/brand_assets/cta.jpg') center center / cover no-repeat;"></div>
+      <div class="absolute inset-0" style="background: rgba(30,25,22,0.66);"></div>
       <div class="dark-cta-ramp"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-ink-rgb),0.44) 0%, transparent 65%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 0% 100%, rgba(var(--color-primary-rgb),0.16) 0%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 45% at 100% 100%, rgba(var(--color-primary-rgb),0.12) 0%, transparent 55%);"></div>
+      <div class="absolute inset-0" style="background: radial-gradient(ellipse 120% 110% at 50% 50%, transparent 35%, rgba(0,0,0,0.36) 100%); pointer-events: none;"></div>
 
       <div class="relative z-10 max-w-3xl mx-auto px-5 text-center fade-up">
         <div class="flex justify-center mb-3"><div class="section-title-accent"></div></div>
@@ -1186,7 +1194,7 @@
         <div class="col-span-2 md:col-span-1">
           <!-- LOGO PLACEHOLDER — wordmark stand-in; swap to cream "Sheds Up" owl logo on dark once asset files are in place. -->
           <a href="/" class="flex items-center mb-2" aria-label="Mesquite Sheds & More home">
-            <span class="footer-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
+            <img src="/brand_assets/logo_cream_footer@2x_h240.png" alt="Mesquite Sheds & More" class="footer-logo" width="169" height="120" />
           </a>
           <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 14px; opacity: 0.95;">Portable Buildings &middot; Alamo, TX</p>
           <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Storage sheds, carports, cabins, and custom buildings &mdash; built by Stor-Mor and delivered across the Rio Grande Valley. Authorized Stor-Mor Dealer #878.</p>

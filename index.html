@@ -202,6 +202,11 @@
       letter-spacing: -0.02em; color: #fff; line-height: 1;
     }
     .footer-wordmark .plus { color: var(--color-primary); }
+    .nav-logo { height: 80px; width: auto; display: block; }
+    .nav-logo-scrolled { display: none; }
+    #navbar.scrolled .nav-logo-default { display: none; }
+    #navbar.scrolled .nav-logo-scrolled { display: block; }
+    .footer-logo { height: 120px; width: auto; display: block; }
 
     /* ---- Topbar wrapper (promo strip + nav, fixed together) ---- */
     #topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
@@ -588,7 +593,8 @@
         <!-- LOGO PLACEHOLDER — wordmark stand-in. Swap to recolored "Sheds Up" owl logo
              (charcoal on light / cream on dark) once the brand_assets image files are in place. -->
         <a href="/" class="flex items-center group" aria-label="Mesquite Sheds & More home">
-          <span class="nav-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
+          <img src="/brand_assets/logo_cream_nav@2x_h160.png" alt="Mesquite Sheds & More" class="nav-logo nav-logo-default" width="113" height="80" />
+          <img src="/brand_assets/logo_charcoal_nav@2x_h160.png" alt="Mesquite Sheds & More" class="nav-logo nav-logo-scrolled" width="113" height="80" />
         </a>
 
         <!-- Desktop Nav -->
@@ -684,14 +690,16 @@
   ============================================================ -->
   <section class="hero-bg relative min-h-screen flex items-center overflow-hidden" style="padding-top: clamp(150px, 18vw, 180px); padding-bottom: clamp(56px, 8vw, 96px);" aria-label="Storage sheds in Alamo, TX — Mesquite Sheds & More">
 
-    <!-- Hero background photo — PLACEHOLDER at final dimensions. The template's brand_assets/Hero_background.jpg
-         is an off-brand auto-glass image; swap this src for a real Mesquite shed/lot photo (1920×1080) before launch. -->
-    <img
-      src="https://placehold.co/1920x1080?text=Mesquite+Sheds+Lot+%E2%80%94+Alamo,+TX"
-      alt="Storage sheds and carports on the Mesquite Sheds & More lot in Alamo, TX"
+    <!-- Hero background video — optimized 9.4s clip (muted, autoplay, loop). Poster shows before load / on failure.
+         object-fit: cover fills the hero on all viewports; the existing overlay + vignette below sit on top. -->
+    <video
+      autoplay muted loop playsinline
+      poster="/brand_assets/hero-poster.jpg"
       aria-hidden="true"
       style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center center; z-index: 0;"
-    />
+    >
+      <source src="/brand_assets/hero.mp4" type="video/mp4" />
+    </video>
 
     <!-- Dark overlay -->
     <div style="position: absolute; inset: 0; z-index: 1; background:
@@ -842,7 +850,7 @@
 
           <div class="fade-up" style="transition-delay: 0.08s;">
             <div class="content-photo aspect-[4/3]">
-              <img src="https://placehold.co/720x540?text=Storage+Shed" alt="Storage shed on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="720" height="540" />
+              <img src="/brand_assets/shed.jpg" alt="Storage shed on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="720" height="540" />
             </div>
           </div>
 
@@ -979,30 +987,30 @@
 
         <!-- PLACEHOLDER GALLERY — bare photos only (no labels/captions/badges on images).
              Swap each placehold.co src for a real lot photo; the alt text is final. -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 fade-up" style="transition-delay: 0.06s;">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 fade-up" style="transition-delay: 0.06s;">
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Storage shed on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/shed1.jpg" alt="Storage shed on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
           </figure>
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Lofted barn-style storage shed for sale in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/barn1.jpg" alt="Lofted barn-style storage shed for sale in Alamo, TX" loading="lazy" width="800" height="600" />
           </figure>
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Metal carport on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/carport5.jpg" alt="Metal carport on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
           </figure>
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Portable cabin with a front porch on the lot in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/office1.jpg" alt="Portable cabin with a front porch on the lot in Alamo, TX" loading="lazy" width="800" height="600" />
           </figure>
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Custom building with double doors on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/barn6.jpg" alt="Custom building with double doors on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="800" height="600" />
           </figure>
 
-          <figure class="work-tile aspect-[4/3]">
-            <img src="https://placehold.co/800x600" alt="Row of storage buildings ready for delivery in Alamo, TX" loading="lazy" width="800" height="600" />
+          <figure class="work-tile aspect-[3/2]">
+            <img src="/brand_assets/cabin1.jpg" alt="Portable cabin with double doors on our Alamo lot" loading="lazy" width="800" height="600" />
           </figure>
 
         </div>
@@ -1066,7 +1074,7 @@
 
           <div class="fade-up lg:order-1" style="transition-delay: 0.08s;">
             <div class="content-photo aspect-[4/3]">
-              <img src="https://placehold.co/720x540?text=Rent-to-Own" alt="Customer picking up a new storage shed at the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="720" height="540" />
+              <img src="/brand_assets/delivery.png" alt="Customer picking up a new storage shed at the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="720" height="540" />
             </div>
           </div>
 
@@ -1085,7 +1093,8 @@
 
           <div class="fade-up lg:order-1 order-2" style="transition-delay: 0.08s;">
             <div class="content-photo aspect-[4/3]">
-              <img src="https://placehold.co/720x540?text=Carport" alt="Metal carport for two vehicles on the Mesquite Sheds & More lot in Alamo, TX" loading="lazy" width="720" height="540" />
+              <!-- carport.jpg reused from services/carports.html (interim — no other clean carport photo available); swap to a dedicated shot when one arrives -->
+              <img src="/brand_assets/carport.jpg" alt="Carport for backyard or business use in Alamo, TX" loading="lazy" width="720" height="540" />
             </div>
           </div>
 
@@ -1308,11 +1317,27 @@
 
           <!-- GHL quote form -->
           <div class="area-card" style="background: rgba(var(--color-ink-rgb),0.04); min-height: 480px; padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-            <!-- GHL QUOTE / CONTACT FORM EMBED GOES HERE -->
-            <div style="text-align: center; padding: 48px 32px; color: var(--color-gray-600);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; opacity: 0.75;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
-              <p class="font-display font-700" style="color: var(--color-ink); font-size: 1rem; margin-bottom: 6px;">Quote request form goes here</p>
-              <p class="text-sm" style="color: var(--color-gray-600);">Paste the GHL form embed to activate. Until then, call or text (956) 586-6093.</p>
+            <!-- GHL QUOTE / CONTACT FORM EMBED -->
+            <!-- iframe uses height:100%; the wrapper gives it an explicit min-height so it doesn't collapse to 0 -->
+            <div style="width:100%; min-height:654px; display:flex;">
+              <iframe
+                  src="https://api.leadconnectorhq.com/widget/form/6KXY6lKzfW4izSFYTMj2"
+                  style="width:100%;height:100%;border:none;border-radius:10px"
+                  id="inline-6KXY6lKzfW4izSFYTMj2"
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Website Form (Trial)"
+                  data-height="654"
+                  data-layout-iframe-id="inline-6KXY6lKzfW4izSFYTMj2"
+                  data-form-id="6KXY6lKzfW4izSFYTMj2"
+                  title="Website Form (Trial)"
+                      >
+              </iframe>
             </div>
           </div>
 
@@ -1321,12 +1346,8 @@
         <!-- Map -->
         <div class="fade-up mt-12" style="transition-delay: 0.12s;">
           <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(var(--color-ink-rgb),0.14); box-shadow: 0 24px 60px -24px rgba(43,36,32,0.45); background: rgba(var(--color-ink-rgb),0.04); height: 420px; display: flex; align-items: center; justify-content: center;">
-            <!-- GOOGLE MAPS EMBED GOES HERE — 97 E Bus Hwy 83, Alamo, TX 78516 -->
-            <div style="text-align: center; padding: 40px; color: var(--color-gray-600);">
-              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 16px; opacity: 0.75;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <p class="font-display font-700" style="color: var(--color-ink); font-size: 1rem; margin-bottom: 6px;">Google Map goes here</p>
-              <p class="text-sm" style="color: var(--color-gray-600);">Paste the Google Maps embed for 97 E Bus Hwy 83, Alamo, TX 78516.</p>
-            </div>
+            <!-- GOOGLE MAPS EMBED — 97 E Bus Hwy 83, Alamo, TX 78516. width/height made responsive (fills the sized, rounded parent) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.5769148870727!2d-98.09744628910583!3d26.17790497699718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8665757774dfd4f7%3A0xa30c5bc73882aa3f!2sMesquite%20Sheds%20And%20More!5e0!3m2!1sen!2sus!4v1782692755249!5m2!1sen!2sus" style="border:0; width:100%; height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mesquite Sheds & More on Google Maps — 97 E Bus Hwy 83, Alamo, TX 78516"></iframe>
           </div>
         </div>
       </div>
@@ -1338,8 +1359,8 @@
          FINAL CTA — cta-background.jpg + dark overlay
     ============================================================ -->
     <section class="dark-section relative py-24 overflow-hidden" aria-label="Final call to action">
-      <!-- PLACEHOLDER at final dimensions. Template's cta-background.jpg is off-brand auto-glass; swap this url for a real Mesquite lot/building photo (1920×1080) before launch. -->
-      <div class="absolute inset-0" style="background: url('https://placehold.co/1920x1080?text=Mesquite+Sheds') center center / cover no-repeat;"></div>
+      <!-- CTA background image (cta) + overlay/vignette below -->
+      <div class="absolute inset-0" style="background: url('/brand_assets/cta.jpg') center center / cover no-repeat;"></div>
       <div class="absolute inset-0" style="background: rgba(30,25,22,0.66);"></div>
       <div class="dark-cta-ramp"></div>
       <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 80% at 50% 40%, rgba(var(--color-ink-rgb),0.44) 0%, transparent 65%);"></div>
@@ -1402,7 +1423,7 @@
         <div class="col-span-2 md:col-span-1">
           <!-- LOGO PLACEHOLDER — wordmark stand-in; swap to cream "Sheds Up" owl logo on dark once asset files are in place. -->
           <a href="/" class="flex items-center mb-2" aria-label="Mesquite Sheds & More home">
-            <span class="footer-wordmark">Mesquite Sheds<span class="plus"> &amp; More</span></span>
+            <img src="/brand_assets/logo_cream_footer@2x_h240.png" alt="Mesquite Sheds & More" class="footer-logo" width="169" height="120" />
           </a>
           <p style="font-family: 'Barlow', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--color-primary-light); margin-bottom: 14px; opacity: 0.95;">Portable Buildings &middot; Alamo, TX</p>
           <p class="text-muted-light text-sm mb-5" style="line-height: 1.7;">Storage sheds, carports, cabins, and custom buildings &mdash; built by Stor-Mor and delivered across the Rio Grande Valley. Authorized Stor-Mor Dealer #878.</p>
@@ -1524,7 +1545,8 @@
 
   <!-- GHL CHAT WIDGET SCRIPT GOES HERE -->
   <!-- GHL EXTERNAL TRACKING SCRIPT GOES HERE -->
-  <!-- GHL FORM EMBED SCRIPT GOES HERE -->
+  <!-- GHL FORM EMBED SCRIPT -->
+  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 </body>
 </html>
