@@ -157,7 +157,8 @@ pricing on the site.
 
 ### Assets Status
 
-- **Logo: PROVIDED** — raster photo of the printed "Sheds Up" owl logo (no vector source yet). Recolored to the brand palette: **charcoal `#2B2420`** for use on light/cream sections, **cream `#FAF5EC`** for use on dark sections (footer, dark nav-on-scroll). Files in `brand_assets/`. Do NOT use a white-filter swap on dark backgrounds — use the cream version. ACTION: ask Manny & Alondra if an original vector/design file exists for a future quality upgrade (pure asset-swap, no rework).
+- **Logo: PROVIDED.** 4 files in `brand_assets/`: `logo_charcoal_nav@2x_h160.png`, `logo_charcoal_footer@2x_h240.png`, `logo_cream_nav@2x_h160.png`, `logo_cream_footer@2x_h240.png`. Charcoal variant = dark mark for light/cream backgrounds; cream variant = light mark for dark backgrounds. Sized for nav (160px @1x display) and footer (240px @1x display) placements.
+  - **IMPORTANT — brand mark vs. business name (do not flag as a mismatch):** the visual logo mark is an owl illustration + "Sheds Up" wordmark. This is the client's actual visual brand mark and is CORRECT AS-IS. The formal business name remains "Mesquite Sheds & More" and continues to be used everywhere else — body copy, page titles, schema, NAP, alt text. These two coexisting is intentional, confirmed by the client. Do not rename files, do not attempt to make the logo say "Mesquite Sheds & More," and do not treat this as an inconsistency to fix in future sessions.
 - Hero imagery/video: [NEEDS INPUT] — template ships `brand_assets/Hero_background.jpg` placeholder; replace with real Mesquite shed/lot photo
 - Product/inventory photos: [NEEDS INPUT] — homepage recent-work gallery currently uses placehold.co placeholders
 - og-image.jpg: [NEEDS INPUT] — referenced sitewide but NOT yet created; needs a 1200×630 social image
