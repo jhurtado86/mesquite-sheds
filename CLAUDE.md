@@ -14,7 +14,8 @@ For all page copy and content, read and follow SEO-CONTENT-PROMPT.md as the PRIM
 
 - **Business name:** Mesquite Sheds & More (also referred to as Mesquite Sheds)
 - **Industry:** Portable building dealer — storage sheds, carports, cabins/portable offices, and custom-built structures
-- **Owners/Operators:** Manny and Alondra (run the office; the faces of the business)
+- **Owner:** Sandra (first name only — do not use a last name in copy). Sandra is the face of the business and should be featured as the owner in About page and homepage copy.
+- **Staff/team on the lot:** Manny and Alondra — they are staff members, NOT owners, NOT a married couple. The "husband-and-wife team" framing used throughout the current site copy is factually wrong and must be corrected everywhere. Describe them as the friendly staff / team members visitors will meet on the lot — not owners, not a couple.
 - **Supplier/Manufacturer:** Stor-Mor (Mesquite Sheds is an authorized Stor-Mor dealer, dealer #878 — dealer page at stormor.shedsuite.com/878). Buildings are built at the Stor-Mor shop/factory and delivered to the customer.
 - **Physical address:** 97 E Bus Hwy 83, Alamo, TX 78516 (corner of Border Rd and Bus 83) — this is a retail lot with on-site inventory; the address IS used publicly
 - **Phone/Text:** (956) 586-6093 — display format. Use E.164 (`+19565866093`) for all `tel:` href attributes and the JSON-LD `telephone` field; use the display format in visible copy, meta/OG/Twitter descriptions, and alt text.
@@ -124,7 +125,7 @@ pricing on the site.
 
 - Casual, personal, warm, and community/family-oriented
 - Friendly and welcoming, bilingual-friendly RGV feel (the client's own posts open with "Halo Halo!!!" and a personal "come visit us" energy)
-- Manny and Alondra are the faces of the business — reference them by name where appropriate
+- Sandra is the owner and face of the business. Manny and Alondra are staff members on the lot. Reference Sandra as the owner; reference Manny and Alondra as the team/staff visitors will meet — never as owners, never as a couple.
 - NOTE: the client's social posts are very exclamation-heavy and all-caps in places. For website copy, keep the warmth and personality but temper the punctuation/caps into clean, readable web copy — the personable tone stays, the social-post styling does not carry into headers and body text.
 
 ### Brand Tagline
